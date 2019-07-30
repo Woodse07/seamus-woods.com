@@ -1,71 +1,54 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <title>Raphael @sundowndev</title>
-    <!-- SEO & social metadata -->
-    <meta
-      name="keywords"
-      content="developer,programmer,sundowndev,javascript,developpeur,web,freelance,php,nodejs"
-    />
-    <meta
-      name="description"
-      content="Raphael Cerveaux, web, security and OSINT enthusiast."
-    />
-    <meta
-      content="Raphael Cerveaux, web, security and OSINT enthusiast."
-      name="description"
-    />
-    <meta
-      content="Raphael Cerveaux, web, security and OSINT enthusiast."
-      property="og:description"
-    />
-    <meta content="https://crvx.fr/avatar.jpg" property="og:image" />
-    <meta content="Raphael @sundowndev" property="og:title" />
-    <meta content="Raphael @sundowndev" property="og:site_name" />
-    <meta content="website" property="og:type" />
-    <!-- Stylesheet -->
-    <link href="style.css" rel="stylesheet" />
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <!--[if lt IE 8]>
-    <div class="unsupported-browser">
-      <strong>
-        You are using an outdated browser.
-      </strong>
-      <span>
-        Please
-        <a class="upgrade-browser" href="http://browsehappy.com/">
-          upgrade your browser</a
-        >
-        or
-        <a
-          class="chrome-frame"
-          href="http://www.google.com/chromeframe/?redirect=true"
-          >activate Google Chrome Frame</a
-        >
-        to improve your experience.
-      </span>
-    </div>
-  <![endif]-->
+.message
 
-  <body>
-    <noscript>
-      <strong
-        >We're sorry but this site doesn't work properly without JavaScript
-        enabled. Please enable it to continue.</strong
-      >
-    </noscript>
+<style>
+$msg: 'Hi, my name is Seamus!', '';
+$cmsg: str-length(nth($msg, 1)) 
+	str-length(nth($msg, 2));
+$max: max($cmsg...);
+$nmsg: $max + min($cmsg...);
+$tu: .2s;
 
-    <div id="app"></div>
-  </body>
+body {
+	margin: 0;
+	height: 100vh;
+	background: 
+		radial-gradient(rgba(#000, .7), #000), 
+		url(https://pbs.twimg.com/media/CsjHEVFW8AA7uDs.jpg) 50%/cover no-repeat #000;
+	background-blend-mode: luminosity;
+	color: lime;
+	font: 1.5em/ 2 vt323, monospace;
+}
 
-  <script src="build.js"></script>
-</html>
+.message {
+	position: absolute;
+	top: 50%; left: 50%;
+	width: $max*1ch;
+	transform: translate(-50%, -50%);
+	
+	&:before, &:after {
+		display: block;
+		overflow: hidden;
+		width: 0;
+		white-space: nowrap;
+		animation: a1 nth($cmsg, 1)*$tu 
+			steps(nth($cmsg, 1)) forwards;
+		content: nth($msg, 1);
+	}
+	
+	&:after {
+		animation: a2 nth($cmsg, 2)*$tu
+			steps(nth($cmsg, 2)) nth($cmsg, 1)*$tu 
+			forwards;
+		content: nth($msg, 2);
+	}
+}
 
+@for $i from 1 through 2 {
+	@keyframes a#{$i} {
+		to { width: nth($cmsg, $i)*1ch; }
+	}
+}
+</style>
+
+</html
