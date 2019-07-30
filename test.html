@@ -92,7 +92,7 @@ input[type="text"]{
   width: 24%;
   font-family: 'Inconsolata', monospace;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 24px;
   -webkit-transition: color 0.5s;
   -moz-transition:    color 0.5s;
   -ms-transition:     color 0.5s;
@@ -128,7 +128,13 @@ function type(){
       type();
     }, timeInterval);
   }else{
-
+    i = 0;
+    setTimeout(function(){
+    $('.text').text('')
+    str = "I'm a Computer Science student!"
+    splitstr = str.split('');
+    type();
+    }, 3000);
   }
 }
 
