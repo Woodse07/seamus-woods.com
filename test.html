@@ -3,19 +3,37 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
 
-<div class="parent">
+<div id="fullpage" class="parent">
+
+<title>Seamus Woods</title>
 
 <head>
  <div class="topnav">
-  <a style="border-right:1px solid green" class="active" href="#home">Home</a>
-  <a style="border-right:1px solid green" href="#about">About</a>
-  <a style="border-right:1px solid green" href="#portfolio">Portfolio</a>
-  <a href="#resume">Resume</a>
+  <a onclick="test('Home')" style="border-right:1px solid green" class="active" href="#home">Home</a>
+  <a onclick="test('About')" style="border-right:1px solid green" href="#about">About</a>
+  <a onclick="test('Portfolio')" style="border-right:1px solid green" href="#portfolio">Portfolio</a>
+  <a onclick="test('Resume')" href="#resume">Resume</a>
 </div> 
 </head>
 
-<h1><span class="text">
-  </span><span class="blinking bold">|</span></h1>
+<div id="selfTexting" class="parent">
+	<h1><span class="text">
+		</span><span class="blinking bold">|</span>
+	</h1>
+</div>
+
+<div id="aboutPage" style="display:none;">
+	<p style="color:white">About Page</p>
+</div>
+
+<div id="portfolioPage" style="display:none;">
+	<p style="color:white">Portfolio Page</p>
+</div>
+
+<div id="resumePage" style="display:none;">
+	<p style="color:white">Resume Page</p>
+</div>
+  
 </div>
 
 
@@ -113,12 +131,41 @@ input[type="text"]{
 </style>
 
 <script>
-var str = "Hi, my name is Seamus!"
-var splitstr = str.split('');
+
+function test(page){
+  if(page == 'About'){
+    document.getElementById('selfTexting').style.display = "None"
+    document.getElementById('aboutPage').style.display = "None"
+    document.getElementById('portfolioPage').style.display = "None"    
+    document.getElementById('resumePage').style.display = "Block"
+  }
+  else if(page == 'Home'){
+    document.getElementById('selfTexting').style.display = "flex"
+    document.getElementById('aboutPage').style.display = "None"
+    document.getElementById('portfolioPage').style.display = "None"    
+    document.getElementById('resumePage').style.display = "None"
+  }
+  else if(page == 'Portfolio'){
+    document.getElementById('selfTexting').style.display = "None"
+    document.getElementById('aboutPage').style.display = "None"
+    document.getElementById('portfolioPage').style.display = "Block"    
+    document.getElementById('resumePage').style.display = "None"
+  }
+  else if(page == 'Resume'){
+    document.getElementById('selfTexting').style.display = "None"
+    document.getElementById('aboutPage').style.display = "None"
+    document.getElementById('portfolioPage').style.display = "None"    
+    document.getElementById('resumePage').style.display = "Block"
+  }
+}
+
+var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"]
+var splitstr = str[0].split('');
 
 timeInterval = 150;
 
 i = 0;
+x = 0;
 
 function type(){
   if(i<splitstr.length){
@@ -129,16 +176,19 @@ function type(){
     }, timeInterval);
   }else{
     i = 0;
+    x++;
+    if(x > 2){x=0}
     setTimeout(function(){
     $('.text').text('')
-    str = "I'm a Computer Science student!"
-    splitstr = str.split('');
+    splitstr = str[x].split('');
     type();
     }, 3000);
   }
 }
 
 type();
+
+
 
 
 </script>
