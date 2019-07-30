@@ -4,17 +4,20 @@
 
 <div class="parent">
 
+<head>
+<p style="color:white">Hello World</p>
+</head>
+
 <h1><span class="text">
   </span><span class="blinking bold">|</span></h1>
-  <input class="user_input" type="text" placeholder="Enter text" value="steve jobs"/>
-  <button>RETYPE</button>
 </div>
 
 
 
 <style>
 html,body{
-  height: 100%
+  height: 100%;
+  background: black;
 }
 
 .parent{
@@ -25,6 +28,7 @@ html,body{
 }
 
 h1{
+  color: white;
   font-weight: 300;
   font-family: Lato;
   margin: auto;
@@ -70,7 +74,7 @@ input[type="text"]{
 </style>
 
 <script>
-var str = "steve jobs"
+var str = "Hi, my name is Seamus Woods!"
 var splitstr = str.split('');
 
 timeInterval = 150;
@@ -85,19 +89,13 @@ function type(){
       type();
     }, timeInterval);
   }else{
-    
+
   }
 }
 
 type();
 
-$('button').click(function(){
-  i = 0;
-  str = $('input').val();
-  splitstr = str.split('');
-  $('.text').text('');
-  type();
-});
+
 </script>
 
 </html
