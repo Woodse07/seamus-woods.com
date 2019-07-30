@@ -1,11 +1,17 @@
 <html>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
 
 <div class="parent">
 
 <head>
-<p style="color:white">Hello World</p>
+ <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#resume">Resume</a>
+</div> 
 </head>
 
 <h1><span class="text">
@@ -28,9 +34,9 @@ html,body{
 }
 
 h1{
-  color: white;
+  color: #4AF626;
   font-weight: 300;
-  font-family: Lato;
+  font-family: 'Inconsolata', monospace;
   margin: auto;
 }
 
@@ -70,6 +76,38 @@ input[type="text"]{
   font-size: 14px;
   border: 1px solid lightgrey;
   border-radius: 4px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #4AF626;
+  text-align: center;
+  padding: 14px 10%;
+  font-family: 'Inconsolata', monospace;
+  text-decoration: none;
+  font-size: 19px;
+  -webkit-transition: color 0.5s;
+  -moz-transition:    color 0.5s;
+  -ms-transition:     color 0.5s;
+  -o-transition:      color 0.5s;
+  transition:         color 0.5s;
+  outline: 0;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: white;
 }
 </style>
 
