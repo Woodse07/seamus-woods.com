@@ -1,54 +1,101 @@
 <html>
-.message
+
+<div class="parent">
+
+<h1><span class="text">
+  </span><span class="blinking bold">|</span></h1>
+  <input class="user_input" type="text" placeholder="Enter text" value="steve jobs"/>
+  <button>RETYPE</button>
+</div>
+
+
 
 <style>
-$msg: 'Hi, my name is Seamus!', '';
-$cmsg: str-length(nth($msg, 1)) 
-	str-length(nth($msg, 2));
-$max: max($cmsg...);
-$nmsg: $max + min($cmsg...);
-$tu: .2s;
-
-body {
-	margin: 0;
-	height: 100vh;
-	background: 
-		radial-gradient(rgba(#000, .7), #000), 
-		url(https://pbs.twimg.com/media/CsjHEVFW8AA7uDs.jpg) 50%/cover no-repeat #000;
-	background-blend-mode: luminosity;
-	color: lime;
-	font: 1.5em/ 2 vt323, monospace;
+html,body{
+  height: 100%
 }
 
-.message {
-	position: absolute;
-	top: 50%; left: 50%;
-	width: $max*1ch;
-	transform: translate(-50%, -50%);
-	
-	&:before, &:after {
-		display: block;
-		overflow: hidden;
-		width: 0;
-		white-space: nowrap;
-		animation: a1 nth($cmsg, 1)*$tu 
-			steps(nth($cmsg, 1)) forwards;
-		content: nth($msg, 1);
-	}
-	
-	&:after {
-		animation: a2 nth($cmsg, 2)*$tu
-			steps(nth($cmsg, 2)) nth($cmsg, 1)*$tu 
-			forwards;
-		content: nth($msg, 2);
-	}
+.parent{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-@for $i from 1 through 2 {
-	@keyframes a#{$i} {
-		to { width: nth($cmsg, $i)*1ch; }
-	}
+h1{
+  font-weight: 300;
+  font-family: Lato;
+  margin: auto;
+}
+
+.blinking{
+  animation: blink 0.5s infinite alternate;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 1
+  }
+  100%{
+    opacity: 0
+  }
+}
+
+button{
+  border: none;
+  width: 100px;
+  margin: 20px auto;
+  outline: none;
+  padding: 5px;
+  color: white;
+  background: #555;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="text"]{
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
 }
 </style>
+
+<script>
+var str = "steve jobs"
+var splitstr = str.split('');
+
+timeInterval = 150;
+
+i = 0;
+
+function type(){
+  if(i<splitstr.length){
+    $('.text').append(splitstr[i]);
+    i++;
+    setTimeout(function () {
+      type();
+    }, timeInterval);
+  }else{
+    
+  }
+}
+
+type();
+
+$('button').click(function(){
+  i = 0;
+  str = $('input').val();
+  splitstr = str.split('');
+  $('.text').text('');
+  type();
+});
+</script>
 
 </html
