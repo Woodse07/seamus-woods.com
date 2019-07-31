@@ -35,15 +35,29 @@
         <h1><span class="text">
 		</span><span class="blinking bold">|</span>
         </h1>
-        <h1><span class="text1">
-		</span><span class="blinking bold">|</span>
-        </h1>
     </div>
 
     <div id="aboutPage" class="about" style="display:none;">
-        <p>Name: </p>
-        <p>Age: </p>
-        <p>Email: </p>
+        <h2>
+            <span class="nameText">Name: </span>
+            <span class="blinking bold">|</span>
+        </h2>
+        <h2>
+            <span class="ageText">Age: </span>
+            <span class="blinking bold">|</span>
+        </h2>
+        <h2>
+            <span class="emailText">Email: </span>
+            <span class="blinking bold">|</span>
+        </h2>
+        <h2>
+            <span class="courseText">Course: </span>
+            <span class="blinking bold">|</span>
+        </h2>
+        <h2>
+            <span class="educationText">Education: </span>
+            <span class="blinking bold">|</span>
+        </h2>
     </div>
 
     <div id="portfolioPage" style="display:none;">
@@ -83,8 +97,7 @@
     }
 
     .about {
-        padding-top: 5%;
-        text-align: center;
+        padding-top: 10%;
         display: flex;
         flex-direction: column;
     }
@@ -95,13 +108,20 @@
     }
 
     .parent {
-        text-align: center;
         display: flex;
         flex-direction: column;
         height: 100%;
     }
 
     h1 {
+        color: #4AF626;
+        font-weight: 300;
+        font-family: 'Inconsolata', monospace;
+        margin: auto;
+    }
+
+    h2 {
+        padding-left: 5%;
         color: #4AF626;
         font-weight: 300;
         font-family: 'Inconsolata', monospace;
@@ -157,14 +177,13 @@
         color: #4AF626;
         font-family: 'Inconsolata', monospace;
         text-decoration: none;
-        font-size: 2.5vw;
+        font-size: 22px;
         -webkit-transition: color 0.5s;
         -moz-transition: color 0.5s;
         -ms-transition: color 0.5s;
         -o-transition: color 0.5s;
         transition: color 0.5s;
         outline: 0;
-        border-right: 1px solid green;
         display: flex;
         float: left;
         width: 100%;
@@ -197,6 +216,26 @@
             document.getElementById('AboutButton').className = "active";
             document.getElementById('PortfolioButton').className = "";
             document.getElementById('ResumeButton').className = "";
+            $('.nameText').text('Name: ');
+            $('.ageText').text('Age: ');
+            $('.emailText').text('Email: ');
+            $('.courseText').text('Course: ');
+            $('.educationText').text('Education: ');
+            var string = "Seamus Woods";
+            var splitstring = string.split('');
+            type(splitstring, 0, 'nameText', 100);
+            string = "21";
+            splitstring = string.split('');
+            type(splitstring, 0, 'ageText', 500);
+            string = "Sewoods@tcd.ie";
+            splitstring = string.split('');
+            type(splitstring, 0, 'emailText', 150);
+            string = "Computer Science";
+            splitstring = string.split('');
+            type(splitstring, 0, 'courseText', 150);
+            string = "Trinity College Dublin";
+            splitstring = string.split('');
+            type(splitstring, 0, 'educationText', 150);
         } else if (page == 'Home') {
             document.getElementById('selfTexting').style.display = "flex";
             document.getElementById('aboutPage').style.display = "None";
@@ -230,12 +269,12 @@
     var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"];
     var splitstring = str[0].split('');
 
-    timeInterval = 150;
+    timeInterval = 100;
 
     x = 0;
-    y = 1;
 
-    function type(splitstr, index, className) {
+    function type(splitstr, index, className, speed) {
+        console.log(timeInterval);
         if (index < splitstr.length) {
             $('.' + className + '').append(splitstr[index]);
             index++;
@@ -243,20 +282,32 @@
                 type(splitstr, index, className);
             }, timeInterval);
         } else {
+
+        }
+    }
+
+    function typeMain(splitstr, index, className) {
+        if (index < splitstr.length) {
+            $('.' + className + '').append(splitstr[index]);
+            index++;
+            setTimeout(function () {
+                typeMain(splitstr, index, className);
+            }, timeInterval);
+        } else {
             x++;
             if (x > 2) {
-                x = 0
+                x = 0;
             }
+            index = 0;
+            splitstr = str[x].split('');
             setTimeout(function () {
                 $('.' + className + '').text('');
-                splitstring = str[x].split('');
-                type(splitstring, 0, className);
+                typeMain(splitstr, index, className);
             }, 3000);
         }
     }
 
-    type(splitstring, 0, 'text');
-    type(splitstring, 4, 'text1');
+    typeMain(splitstring, 0, 'text');
 
 
 </script>
