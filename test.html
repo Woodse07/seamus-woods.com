@@ -3,31 +3,25 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 
+<nav class="topnav">
+    <ul>
+        <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"
+           href="#">Home</a>
+        <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>
+        <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green"
+           href="#">Portfolio</a>
+        <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
+    </ul>
+</nav>
+
+
+<head>
+    <title>Seamus Woods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+</head>
+
 <div id="fullpage" class="parent">
 
-    <title>Seamus Woods</title>
-
-    <head>
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
-<!--        <nav class="topnav">-->
-<!--            <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"-->
-<!--               href="#">Home</a>-->
-<!--            <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>-->
-<!--            <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green"-->
-<!--               href="#">Portfolio</a>-->
-<!--            <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>-->
-<!--        </nav>-->
-    </head>
-
-            <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-        <nav class="topnav">
-            <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"
-               href="#">Home</a>
-            <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>
-            <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green"
-               href="#">Portfolio</a>
-            <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
-        </nav>
 
     <div id="selfTexting" class="parent">
         <h1><span class="text">
@@ -53,7 +47,6 @@
     </div>
 
 </div>
-
 
 
 <style>
@@ -160,50 +153,49 @@
 </style>
 
 
-
 <script>
 
     function test(page) {
         if (page == 'About') {
-            document.getElementById('selfTexting').style.display = "None"
-            document.getElementById('aboutPage').style.display = "Block"
-            document.getElementById('portfolioPage').style.display = "None"
-            document.getElementById('resumePage').style.display = "None"
-            document.getElementById('HomeButton').className = ""
-            document.getElementById('AboutButton').className = "active"
-            document.getElementById('PortfolioButton').className = ""
-            document.getElementById('ResumeButton').className = ""
+            document.getElementById('selfTexting').style.display = "None";
+            document.getElementById('aboutPage').style.display = "Block";
+            document.getElementById('portfolioPage').style.display = "None";
+            document.getElementById('resumePage').style.display = "None";
+            document.getElementById('HomeButton').className = "";
+            document.getElementById('AboutButton').className = "active";
+            document.getElementById('PortfolioButton').className = "";
+            document.getElementById('ResumeButton').className = "";
         } else if (page == 'Home') {
-            document.getElementById('selfTexting').style.display = "flex"
-            document.getElementById('aboutPage').style.display = "None"
-            document.getElementById('portfolioPage').style.display = "None"
-            document.getElementById('resumePage').style.display = "None"
-            document.getElementById('HomeButton').className = "active"
-            document.getElementById('AboutButton').className = ""
-            document.getElementById('PortfolioButton').className = ""
-            document.getElementById('ResumeButton').className = ""
+            document.getElementById('selfTexting').style.display = "flex";
+            document.getElementById('aboutPage').style.display = "None";
+            document.getElementById('portfolioPage').style.display = "None";
+            document.getElementById('resumePage').style.display = "None";
+            document.getElementById('HomeButton').className = "active";
+            document.getElementById('AboutButton').className = "";
+            document.getElementById('PortfolioButton').className = "";
+            document.getElementById('ResumeButton').className = "";
         } else if (page == 'Portfolio') {
-            document.getElementById('selfTexting').style.display = "None"
-            document.getElementById('aboutPage').style.display = "None"
-            document.getElementById('portfolioPage').style.display = "Block"
-            document.getElementById('resumePage').style.display = "None"
-            document.getElementById('HomeButton').className = ""
-            document.getElementById('AboutButton').className = ""
-            document.getElementById('PortfolioButton').className = "active"
-            document.getElementById('ResumeButton').className = ""
+            document.getElementById('selfTexting').style.display = "None";
+            document.getElementById('aboutPage').style.display = "None";
+            document.getElementById('portfolioPage').style.display = "Block";
+            document.getElementById('resumePage').style.display = "None";
+            document.getElementById('HomeButton').className = "";
+            document.getElementById('AboutButton').className = "";
+            document.getElementById('PortfolioButton').className = "active";
+            document.getElementById('ResumeButton').className = "";
         } else if (page == 'Resume') {
-            document.getElementById('selfTexting').style.display = "None"
-            document.getElementById('aboutPage').style.display = "None"
-            document.getElementById('portfolioPage').style.display = "None"
-            document.getElementById('resumePage').style.display = "Block"
-            document.getElementById('HomeButton').className = ""
-            document.getElementById('AboutButton').className = ""
-            document.getElementById('PortfolioButton').className = ""
-            document.getElementById('ResumeButton').className = "active"
+            document.getElementById('selfTexting').style.display = "None";
+            document.getElementById('aboutPage').style.display = "None";
+            document.getElementById('portfolioPage').style.display = "None";
+            document.getElementById('resumePage').style.display = "Block";
+            document.getElementById('HomeButton').className = "";
+            document.getElementById('AboutButton').className = "";
+            document.getElementById('PortfolioButton').className = "";
+            document.getElementById('ResumeButton').className = "active";
         }
     }
 
-    var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"]
+    var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"];
     var splitstring = str[0].split('');
 
     timeInterval = 150;
