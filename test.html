@@ -8,7 +8,18 @@
     <title>Seamus Woods</title>
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
+<!--        <nav class="topnav">-->
+<!--            <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"-->
+<!--               href="#">Home</a>-->
+<!--            <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>-->
+<!--            <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green"-->
+<!--               href="#">Portfolio</a>-->
+<!--            <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>-->
+<!--        </nav>-->
+    </head>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <nav class="topnav">
             <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"
                href="#">Home</a>
@@ -17,18 +28,20 @@
                href="#">Portfolio</a>
             <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
         </nav>
-    </head>
 
     <div id="selfTexting" class="parent">
+        <h1><span class="text">
+		</span><span class="blinking bold">|</span>
+        </h1>
         <h1><span class="text">
 		</span><span class="blinking bold">|</span>
         </h1>
     </div>
 
     <div id="aboutPage" class="about" style="display:none;">
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
+        <p>Name: </p>
+        <p>Age: </p>
+        <p>Email: </p>
     </div>
 
     <div id="portfolioPage" style="display:none;">
@@ -191,35 +204,34 @@
     }
 
     var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"]
-    var splitstr = str[0].split('');
+    var splitstring = str[0].split('');
 
     timeInterval = 150;
 
-    i = 0;
     x = 0;
+    y = 1;
 
-    function type() {
-        if (i < splitstr.length) {
-            $('.text').append(splitstr[i]);
-            i++;
+    function type(splitstr, index, className) {
+        if (index < splitstr.length) {
+            $('.text').append(splitstr[index]);
+            index++;
             setTimeout(function () {
-                type();
+                type(splitstr, index);
             }, timeInterval);
         } else {
-            i = 0;
             x++;
             if (x > 2) {
                 x = 0
             }
             setTimeout(function () {
-                $('.text').text('')
-                splitstr = str[x].split('');
-                type();
+                $('.text').text('');
+                splitstring = str[x].split('');
+                type(splitstring, 0);
             }, 3000);
         }
     }
 
-    type();
+    type(splitstring, 0);
 
 
 </script>
