@@ -8,8 +8,9 @@
 <title>Seamus Woods</title>
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
  <div class="topnav">
-  <a id="HomeButton" style="border-right:1px solid green" class="active" href="#">Home</a>
+  <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active" href="#">Home</a>
   <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>
   <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green" href="#">Portfolio</a>
   <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
@@ -162,18 +163,30 @@ function test(page){
     document.getElementById('aboutPage').style.display = "None"
     document.getElementById('portfolioPage').style.display = "None"    
     document.getElementById('resumePage').style.display = "None"
+    document.getElementById('HomeButton').className  = "active"
+    document.getElementById('AboutButton').className  = ""
+    document.getElementById('PortfolioButton').className  = ""
+    document.getElementById('ResumeButton').className  = ""
   }
   else if(page == 'Portfolio'){
     document.getElementById('selfTexting').style.display = "None"
     document.getElementById('aboutPage').style.display = "None"
     document.getElementById('portfolioPage').style.display = "Block"    
     document.getElementById('resumePage').style.display = "None"
+    document.getElementById('HomeButton').className  = ""
+    document.getElementById('AboutButton').className  = ""
+    document.getElementById('PortfolioButton').className  = "active"
+    document.getElementById('ResumeButton').className  = ""
   }
   else if(page == 'Resume'){
     document.getElementById('selfTexting').style.display = "None"
     document.getElementById('aboutPage').style.display = "None"
     document.getElementById('portfolioPage').style.display = "None"    
     document.getElementById('resumePage').style.display = "Block"
+    document.getElementById('HomeButton').className  = ""
+    document.getElementById('AboutButton').className  = ""
+    document.getElementById('PortfolioButton').className  = ""
+    document.getElementById('ResumeButton').className  = "active"
   }
 }
 
