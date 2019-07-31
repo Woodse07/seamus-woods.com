@@ -51,26 +51,32 @@
     </div>
 
     <div id="aboutPage" class="about" style="display:none;">
-        <h2>
+        <h3>
             <span class="nameText">Name: </span>
             <span class="blinking bold">|</span>
-        </h2>
-        <h2>
+        </h3>
+        <h3>
             <span class="ageText">Age: </span>
             <span class="blinking bold">|</span>
-        </h2>
-        <h2>
+        </h3>
+        <h3>
             <span class="emailText">Email: </span>
             <span class="blinking bold">|</span>
-        </h2>
-        <h2>
+        </h3>
+        <h3>
             <span class="courseText">Course: </span>
             <span class="blinking bold">|</span>
-        </h2>
-        <h2>
+        </h3>
+        <h3>
             <span class="educationText">Education: </span>
             <span class="blinking bold">|</span>
-        </h2>
+        </h3>
+        <br></br>
+        <h3>
+            <span class="bioText">Bio: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+
     </div>
 
     <div id="portfolioPage" style="display:none;">
@@ -151,8 +157,9 @@
         margin: auto;
     }
 
-    h2 {
+    h3 {
         padding-left: 5%;
+        padding-right: 5%;
         color: #4AF626;
         font-weight: 300;
         font-family: 'Inconsolata', monospace;
@@ -257,7 +264,7 @@
             type(splitstring, 0, 'nameText', 100);
             string = "21";
             splitstring = string.split('');
-            type(splitstring, 0, 'ageText', 500);
+            type(splitstring, 0, 'ageText', 250);
             string = "Sewoods@tcd.ie";
             splitstring = string.split('');
             type(splitstring, 0, 'emailText', 150);
@@ -266,7 +273,10 @@
             type(splitstring, 0, 'courseText', 150);
             string = "Trinity College Dublin";
             splitstring = string.split('');
-            type(splitstring, 0, 'educationText', 150);
+            type(splitstring, 0, 'educationText', 50);
+            string = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+            splitstring = string.split('');
+            type(splitstring, 0, 'bioText', 1);
         } else if (page == 'Home') {
             document.getElementById('selfTexting').style.display = "flex";
             document.getElementById('aboutPage').style.display = "None";
@@ -305,13 +315,13 @@
     x = 0;
 
     function type(splitstr, index, className, speed) {
-        console.log(timeInterval);
+        console.log(speed);
         if (index < splitstr.length) {
             $('.' + className + '').append(splitstr[index]);
             index++;
             setTimeout(function () {
-                type(splitstr, index, className);
-            }, timeInterval);
+                type(splitstr, index, className, speed);
+            }, speed);
         } else {
 
         }
