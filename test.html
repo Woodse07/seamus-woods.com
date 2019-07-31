@@ -9,10 +9,10 @@
 
 <head>
  <div class="topnav">
-  <a onclick="test('Home')" style="border-right:1px solid green" class="active" href="#home">Home</a>
-  <a onclick="test('About')" style="border-right:1px solid green" href="#about">About</a>
-  <a onclick="test('Portfolio')" style="border-right:1px solid green" href="#portfolio">Portfolio</a>
-  <a onclick="test('Resume')" href="#resume">Resume</a>
+  <a id="HomeButton" style="border-right:1px solid green" class="active" href="#">Home</a>
+  <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>
+  <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green" href="#">Portfolio</a>
+  <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
 </div> 
 </head>
 
@@ -22,8 +22,10 @@
 	</h1>
 </div>
 
-<div id="aboutPage" style="display:none;">
-	<p style="color:white">About Page</p>
+<div id="aboutPage" class="about" style="display:none;">
+	<p>Hello World</p>
+	<p>Hello World</p>
+	<p>Hello World</p>
 </div>
 
 <div id="portfolioPage" style="display:none;">
@@ -39,6 +41,18 @@
 
 
 <style>
+
+p{
+  color: #4AF626
+}
+
+.about{
+  padding-top: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
 html,body{
   height: 100%;
   background: black;
@@ -135,9 +149,13 @@ input[type="text"]{
 function test(page){
   if(page == 'About'){
     document.getElementById('selfTexting').style.display = "None"
-    document.getElementById('aboutPage').style.display = "None"
+    document.getElementById('aboutPage').style.display = "Block"
     document.getElementById('portfolioPage').style.display = "None"    
-    document.getElementById('resumePage').style.display = "Block"
+    document.getElementById('resumePage').style.display = "None"
+    document.getElementById('HomeButton').className  = ""
+    document.getElementById('AboutButton').className  = "active"
+    document.getElementById('PortfolioButton').className  = ""
+    document.getElementById('ResumeButton').className  = ""
   }
   else if(page == 'Home'){
     document.getElementById('selfTexting').style.display = "flex"
