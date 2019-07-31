@@ -71,14 +71,9 @@
             <span class="educationText">Education: </span>
             <span class="blinking bold">|</span>
         </h3>
-        <br></br>
+        <br><hr></br>
         <h3>
-            <span class="bioText">Bio: </span>
-            <span class="bioText1"></span>
-            <span class="bioText2"></span>
-            <span class="bioText3"></span>
-            <span class="bioText4"></span>
-            <span class="blinking bold">|</span>
+            Bio: Hello World
         </h3>
 
     </div>
@@ -95,6 +90,11 @@
 
 
 <style>
+
+    hr {
+        width: 95%;
+        color: #4AF626;
+    }
 
     .imageLink {
         padding-bottom: 1%;
@@ -263,13 +263,12 @@
             $('.emailText').text('Email: ');
             $('.courseText').text('Course: ');
             $('.educationText').text('Education: ');
-            $('.bioText').text('Bio: ');
             var string = "Seamus Woods";
             var splitstring = string.split('');
             type(splitstring, 0, 'nameText', 100);
             string = "21";
             splitstring = string.split('');
-            type(splitstring, 0, 'ageText', 250);
+            type(splitstring, 0, 'ageText', 700);
             string = "Sewoods@tcd.ie";
             splitstring = string.split('');
             type(splitstring, 0, 'emailText', 150);
@@ -278,23 +277,7 @@
             type(splitstring, 0, 'courseText', 150);
             string = "Trinity College Dublin";
             splitstring = string.split('');
-            type(splitstring, 0, 'educationText', 50);
-
-            string = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
-            splitstring = string.split('');
-            type(splitstring, 0, 'bioText', 1);
-            string = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,";
-            splitstring = string.split('');
-            type(splitstring, 0, 'bioText1', 1);
-            string = "when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-            splitstring = string.split('');
-            type(splitstring, 0, 'bioText2', 1);
-            string = "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
-            splitstring = string.split('');
-            type(splitstring, 0, 'bioText3', 1);
-            string = "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-            splitstring = string.split('');
-            type(splitstring, 0, 'bioText4', 1);
+            type(splitstring, 0, 'educationText', 150);
 
         } else if (page == 'Home') {
             document.getElementById('selfTexting').style.display = "flex";
