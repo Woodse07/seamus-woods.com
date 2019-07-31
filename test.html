@@ -5,12 +5,20 @@
 
 <nav class="topnav">
     <ul>
-        <a id="HomeButton" onclick="test('Home')" style="border-right:1px solid green" class="active"
-           href="#">Home</a>
-        <a id="AboutButton" onclick="test('About')" style="border-right:1px solid green" href="#">About</a>
-        <a id="PortfolioButton" onclick="test('Portfolio')" style="border-right:1px solid green"
-           href="#">Portfolio</a>
-        <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
+        <li>
+            <a id="HomeButton" onclick="test('Home')" class="active"
+               href="#">Home</a>
+        <li>
+
+            <a id="AboutButton" onclick="test('About')" href="#">About</a>
+        </li>
+        <li>
+            <a id="PortfolioButton" onclick="test('Portfolio')"
+               href="#">Portfolio</a>
+        </li>
+        <li>
+            <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
+        </li>
     </ul>
 </nav>
 
@@ -27,7 +35,7 @@
         <h1><span class="text">
 		</span><span class="blinking bold">|</span>
         </h1>
-        <h1><span class="text">
+        <h1><span class="text1">
 		</span><span class="blinking bold">|</span>
         </h1>
     </div>
@@ -50,6 +58,26 @@
 
 
 <style>
+
+    nav {
+        position: absolute;
+        width: 100%;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        list-style: none;
+        width: 100%;
+    }
+
+    li {
+        float: left;
+        width: 25%;
+        list-style-type: none;
+    }
+
     p {
         color: #4AF626
     }
@@ -126,19 +154,23 @@
 
     /* Style the links inside the navigation bar */
     .topnav a {
-        float: left;
         color: #4AF626;
-        text-align: center;
-        width: 24%;
         font-family: 'Inconsolata', monospace;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 2.5vw;
         -webkit-transition: color 0.5s;
         -moz-transition: color 0.5s;
         -ms-transition: color 0.5s;
         -o-transition: color 0.5s;
         transition: color 0.5s;
         outline: 0;
+        border-right: 1px solid green;
+        display: flex;
+        float: left;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
     }
 
     /* Change the color of links on hover */
@@ -205,10 +237,10 @@
 
     function type(splitstr, index, className) {
         if (index < splitstr.length) {
-            $('.text').append(splitstr[index]);
+            $('.' + className + '').append(splitstr[index]);
             index++;
             setTimeout(function () {
-                type(splitstr, index);
+                type(splitstr, index, className);
             }, timeInterval);
         } else {
             x++;
@@ -216,14 +248,15 @@
                 x = 0
             }
             setTimeout(function () {
-                $('.text').text('');
+                $('.' + className + '').text('');
                 splitstring = str[x].split('');
-                type(splitstring, 0);
+                type(splitstring, 0, className);
             }, 3000);
         }
     }
 
-    type(splitstring, 0);
+    type(splitstring, 0, 'text');
+    type(splitstring, 4, 'text1');
 
 
 </script>
