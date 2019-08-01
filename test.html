@@ -1,7 +1,9 @@
 <html>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="test.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+<link href="test.css" rel="stylesheet">
 
 <nav class="topnav">
     <ul>
@@ -31,7 +33,14 @@
 <div id="fullpage" class="parent">
 
 
-    <div class="iconContainer">
+
+
+    <div id="selfTexting" class="parent">
+        <h1><span class="text">
+		</span><span class="blinking bold">|</span>
+        </h1>
+
+            <div class="iconContainer">
         <div style="width:10%">
             <a class="imageLink" href="https://github.com/woodse07" target="_blank">
                 <img alt="Github" class="githubImage" src="images/GitHub-Mark-Light-120px-plus.png">
@@ -43,11 +52,6 @@
             </a>
         </div>
     </div>
-
-    <div id="selfTexting" class="parent">
-        <h1><span class="text">
-		</span><span class="blinking bold">|</span>
-        </h1>
     </div>
 
     <div id="aboutPage" class="about" style="display:none;">
@@ -71,263 +75,72 @@
             <span class="educationText">Education: </span>
             <span class="blinking bold">|</span>
         </h3>
-        <br><hr></br>
+        <br>
+        <hr>
+        </br>
         <h3>
             Bio: Hello World
         </h3>
 
     </div>
 
-    <div id="portfolioPage" style="display:none;">
-        <p style="color:white">Portfolio Page</p>
+    <div id="portfolioPage" class="portfolio" style="display:none;">
+        <h3>
+            Portfolio todo here...
+        </h3>
     </div>
 
-    <div id="resumePage" style="display:none;">
-        <p style="color:white">Resume Page</p>
+    <div id="resumePage" class="resume" style="display:none;">
+        <h3>
+            <span>Javascript </span>
+            <span style="position:absolute;left:15%;" class="jsSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>Java </span>
+            <span style="position:absolute;left:15%;" class="javaSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>C/C++ </span>
+            <span style="position:absolute;left:15%;" class="cSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>Python </span>
+            <span style="position:absolute;left:15%;" class="pythonSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>Arm Assembly </span>
+            <span style="position:absolute;left:15%;" class="armSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>Haskell </span>
+            <span style="position:absolute;left:15%;" class="haskellSkill">= [ ]</span>
+        </h3>
+        <h3>
+            <span>x86 Assembly </span>
+            <span style="position:absolute;left:15%;" class="x86Skill">= [ ]</span>
+        </h3>
+
+        <div class="terminalInput">
+            <hr>
+            <h3>
+                <span class="terminal">></span>
+                <span class="blinking bold">|</span>
+            </h3>
+            <h3>
+                <span class="terminalDone"></span>
+                <span class="blinking2 bold"></span>
+            </h3>
+        </div>
+
+
     </div>
 
 </div>
 
-
-<style>
-
-    hr {
-        width: 95%;
-        color: #4AF626;
-    }
-
-    .imageLink {
-        padding-bottom: 1%;
-    }
-
-    .iconContainer {
-        width: 100%;
-        position: absolute;
-        text-align: center;
-        bottom: 1%;
-        align-self: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .githubImage {
-        width: 50%;
-    }
-
-    nav {
-        position: absolute;
-        width: 100%;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        list-style: none;
-        width: 100%;
-    }
-
-    li {
-        float: left;
-        width: 25%;
-        list-style-type: none;
-    }
-
-    p {
-        color: #4AF626
-    }
-
-    .about {
-        padding-top: 10%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    html, body {
-        height: 100%;
-        background: black;
-    }
-
-    .parent {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    h1 {
-        color: #4AF626;
-        font-weight: 300;
-        font-family: 'Inconsolata', monospace;
-        margin: auto;
-    }
-
-    h3 {
-        padding-left: 5%;
-        padding-right: 5%;
-        color: #4AF626;
-        font-weight: 300;
-        font-family: 'Inconsolata', monospace;
-        margin: auto;
-    }
-
-    .blinking {
-        animation: blink 0.5s infinite alternate;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
-
-    @keyframes blink {
-        0% {
-            opacity: 1
-        }
-        100% {
-            opacity: 0
-        }
-    }
-
-    button {
-        border: none;
-        width: 100px;
-        margin: 20px auto;
-        outline: none;
-        padding: 5px;
-        color: white;
-        background: #555;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-
-    input[type="text"] {
-        width: 200px;
-        margin: 0 auto;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid lightgrey;
-        border-radius: 4px;
-    }
-
-    /* Add a black background color to the top navigation */
-    .topnav {
-        overflow: hidden;
-        width: 100%;
-    }
-
-    /* Style the links inside the navigation bar */
-    .topnav a {
-        color: #4AF626;
-        font-family: 'Inconsolata', monospace;
-        text-decoration: none;
-        font-size: 22px;
-        -webkit-transition: color 0.5s;
-        -moz-transition: color 0.5s;
-        -ms-transition: color 0.5s;
-        -o-transition: color 0.5s;
-        transition: color 0.5s;
-        outline: 0;
-        display: flex;
-        float: left;
-        width: 100%;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
-
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        color: white;
-    }
-
-    /* Add a color to the active/current link */
-    .topnav a.active {
-        color: white;
-    }
-</style>
-
-
 <script>
-
-    function test(page) {
-        if (page == 'About') {
-            document.getElementById('selfTexting').style.display = "None";
-            document.getElementById('aboutPage').style.display = "Block";
-            document.getElementById('portfolioPage').style.display = "None";
-            document.getElementById('resumePage').style.display = "None";
-            document.getElementById('HomeButton').className = "";
-            document.getElementById('AboutButton').className = "active";
-            document.getElementById('PortfolioButton').className = "";
-            document.getElementById('ResumeButton').className = "";
-            $('.nameText').text('Name: ');
-            $('.ageText').text('Age: ');
-            $('.emailText').text('Email: ');
-            $('.courseText').text('Course: ');
-            $('.educationText').text('Education: ');
-            var string = "Seamus Woods";
-            var splitstring = string.split('');
-            type(splitstring, 0, 'nameText', 100);
-            string = "21";
-            splitstring = string.split('');
-            type(splitstring, 0, 'ageText', 700);
-            string = "Sewoods@tcd.ie";
-            splitstring = string.split('');
-            type(splitstring, 0, 'emailText', 150);
-            string = "Computer Science";
-            splitstring = string.split('');
-            type(splitstring, 0, 'courseText', 150);
-            string = "Trinity College Dublin";
-            splitstring = string.split('');
-            type(splitstring, 0, 'educationText', 150);
-
-        } else if (page == 'Home') {
-            document.getElementById('selfTexting').style.display = "flex";
-            document.getElementById('aboutPage').style.display = "None";
-            document.getElementById('portfolioPage').style.display = "None";
-            document.getElementById('resumePage').style.display = "None";
-            document.getElementById('HomeButton').className = "active";
-            document.getElementById('AboutButton').className = "";
-            document.getElementById('PortfolioButton').className = "";
-            document.getElementById('ResumeButton').className = "";
-        } else if (page == 'Portfolio') {
-            document.getElementById('selfTexting').style.display = "None";
-            document.getElementById('aboutPage').style.display = "None";
-            document.getElementById('portfolioPage').style.display = "Block";
-            document.getElementById('resumePage').style.display = "None";
-            document.getElementById('HomeButton').className = "";
-            document.getElementById('AboutButton').className = "";
-            document.getElementById('PortfolioButton').className = "active";
-            document.getElementById('ResumeButton').className = "";
-        } else if (page == 'Resume') {
-            document.getElementById('selfTexting').style.display = "None";
-            document.getElementById('aboutPage').style.display = "None";
-            document.getElementById('portfolioPage').style.display = "None";
-            document.getElementById('resumePage').style.display = "Block";
-            document.getElementById('HomeButton').className = "";
-            document.getElementById('AboutButton').className = "";
-            document.getElementById('PortfolioButton').className = "";
-            document.getElementById('ResumeButton').className = "active";
-        }
-    }
-
     var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"];
     var splitstring = str[0].split('');
-
     timeInterval = 100;
-
-    x = 0;
-
-    function type(splitstr, index, className, speed) {
-        console.log(speed);
-        if (index < splitstr.length) {
-            $('.' + className + '').append(splitstr[index]);
-            index++;
-            setTimeout(function () {
-                type(splitstr, index, className, speed);
-            }, speed);
-        } else {
-
-        }
-    }
 
     function typeMain(splitstr, index, className) {
         if (index < splitstr.length) {
@@ -351,8 +164,7 @@
     }
 
     typeMain(splitstring, 0, 'text');
-
-
 </script>
+
 
 </html>
