@@ -126,18 +126,9 @@ function test(page) {
             string = "|";
             splitstring = string.split('');
             type(splitstring, 0, 'blinking2', 200, "");
-            string = " loadResume()";
+            string = " loadResume --please";
             splitstring = string.split('');
             type(splitstring, 0, 'terminalDone', 100, "");
-            setTimeout(function () {
-                $('.blinking2').text('');
-                string = ">";
-                splitstring = string.split('');
-                type(splitstring, 0, 'terminalDoneDone', 200, "");
-                string = "|";
-                splitstring = string.split('');
-                type(splitstring, 0, 'blinking3', 200, "");
-            }, 2500);
         }, 4000);
 
 
@@ -237,6 +228,15 @@ function test(page) {
                                                                                     splitstring = string.split('');
                                                                                     document.getElementById('x86Skill').style.display = "Block";
                                                                                     typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
+                                                                                    setTimeout(function () {
+                                                                                        $('.blinking2').text('');
+                                                                                        string = ">";
+                                                                                        splitstring = string.split('');
+                                                                                        type(splitstring, 0, 'terminalDoneDone', 200, "");
+                                                                                        string = "|";
+                                                                                        splitstring = string.split('');
+                                                                                        type(splitstring, 0, 'blinking3', 200, "");
+                                                                                    }, 500);
                                                                                 }, 500);
                                                                             }, 500);
                                                                         }, 500);
@@ -256,7 +256,7 @@ function test(page) {
                 }, 3000);
             }
             ,
-            6000
+            6500
         );
     }
 }
