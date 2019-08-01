@@ -1,7 +1,7 @@
 .terminalInput {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 2%;
+    bottom: 0%;
 }
 
 hr {

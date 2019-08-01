@@ -68,7 +68,7 @@ function test(page) {
         $('.course').text('Course: ');
         $('.university').text('University: ');
         $('.year').text('Year: ');
-        $('.grade').text('Grade: ');
+        $('.grade').text('Last Years Grade: ');
         $('.jsSkill').text('');
         $('.javaSkill').text('');
         $('.cSkill').text('');
@@ -132,22 +132,22 @@ function test(page) {
                     string = "Seamus Woods";
                     splitstring = string.split('');
                     document.getElementById('name').style.display = "Block";
-                    type(splitstring, 0, 'name', 50);
+                    type(splitstring, 0, 'name', 20);
                     setTimeout(function () {
                         string = "21";
                         splitstring = string.split('');
                         document.getElementById('age').style.display = "Block";
-                        type(splitstring, 0, 'age', 50);
+                        type(splitstring, 0, 'age', 20);
                         setTimeout(function () {
                             string = "Ireland";
                             splitstring = string.split('');
                             document.getElementById('location').style.display = "Block";
-                            type(splitstring, 0, 'location', 50);
+                            type(splitstring, 0, 'location', 20);
                             setTimeout(function () {
                                 string = "sewoods@tcd.ie";
                                 splitstring = string.split('');
                                 document.getElementById('contact').style.display = "Block";
-                                type(splitstring, 0, 'contact', 50);
+                                type(splitstring, 0, 'contact', 20);
 
 
                                 setTimeout(function () {
@@ -159,22 +159,22 @@ function test(page) {
                                         string = "Integrated Computer Science";
                                         splitstring = string.split('');
                                         document.getElementById('course').style.display = "Block";
-                                        type(splitstring, 0, 'course', 50);
+                                        type(splitstring, 0, 'course', 20);
                                         setTimeout(function () {
                                             string = "Trinity College Dublin";
                                             splitstring = string.split('');
                                             document.getElementById('university').style.display = "Block";
-                                            type(splitstring, 0, 'university', 50);
+                                            type(splitstring, 0, 'university', 20);
                                             setTimeout(function () {
                                                 string = "4th";
                                                 splitstring = string.split('');
                                                 document.getElementById('year').style.display = "Block";
-                                                type(splitstring, 0, 'year', 50);
+                                                type(splitstring, 0, 'year', 20);
                                                 setTimeout(function () {
                                                     string = "First (I)";
                                                     splitstring = string.split('');
                                                     document.getElementById('grade').style.display = "Block";
-                                                    type(splitstring, 0, 'grade', 50);
+                                                    type(splitstring, 0, 'grade', 20);
 
 
                                                     setTimeout(function () {
@@ -223,17 +223,17 @@ function test(page) {
                                                                     }, 500);
                                                                 }, 500);
                                                             }, 500);
-                                                        }, 2500);
+                                                        }, 3000);
                                                     }, 500);
                                                 }, 500);
                                             }, 500);
                                         }, 500);
-                                    }, 2500);
+                                    }, 3000);
                                 }, 500);
                             }, 500);
                         }, 500);
                     }, 500);
-                }, 2500);
+                }, 3000);
             }
             ,
             4000
