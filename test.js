@@ -61,6 +61,14 @@ function test(page) {
         document.getElementById('PortfolioButton').className = "";
         document.getElementById('ResumeButton').className = "active";
 
+        $('.name').text('Name: ');
+        $('.age').text('Age: ');
+        $('.location').text('Location: ');
+        $('.contact').text('Contact: ');
+        $('.course').text('Course: ');
+        $('.university').text('University: ');
+        $('.year').text('Year: ');
+        $('.grade').text('Grade: ');
         $('.jsSkill').text('');
         $('.javaSkill').text('');
         $('.cSkill').text('');
@@ -68,6 +76,34 @@ function test(page) {
         $('.armSkill').text('');
         $('.haskellSkill').text('');
         $('.x86Skill').text('');
+        $('.terminal').text('> ');
+        $('.languageLoading').text('Loading Language Proficiency');
+        $('.educationLoading').text('Loading Education');
+        $('.generalLoading').text('Loading General Information');
+
+        document.getElementById('generalLoading').style.display = "None";
+        document.getElementById('name').style.display = "None";
+        document.getElementById('age').style.display = "None";
+        document.getElementById('location').style.display = "None";
+        document.getElementById('contact').style.display = "None";
+
+        document.getElementById('educationLoading').style.display = "None";
+        document.getElementById('course').style.display = "None";
+        document.getElementById('university').style.display = "None";
+        document.getElementById('year').style.display = "None";
+        document.getElementById('grade').style.display = "None";
+
+        document.getElementById('languageLoading').style.display = "None";
+        document.getElementById('jsSkill').style.display = "None";
+        document.getElementById('javaSkill').style.display = "None";
+        document.getElementById('cSkill').style.display = "None";
+        document.getElementById('pythonSkill').style.display = "None";
+        document.getElementById('armSkill').style.display = "None";
+        document.getElementById('haskellSkill').style.display = "None";
+        document.getElementById('x86Skill').style.display = "None";
+        $('.blinking').text('|');
+        $('.blinking2').text('');
+        $('.terminalDone').text('');
         $('.terminal').text('> ');
 
         string = "loadResume()";
@@ -84,50 +120,120 @@ function test(page) {
             type(splitstring, 0, 'blinking2', 200, "");
         }, 3000);
 
+
         setTimeout(function () {
 
-                string = "#################";
+
+                string = ".....";
                 splitstring = string.split('');
-                document.getElementById('jsSkill').style.display = "Block";
-                typeSkill(splitstring, 0, 'jsSkill', 20, "______________________________");
+                document.getElementById('generalLoading').style.display = "Block";
+                type(splitstring, 0, 'generalLoading', 600);
                 setTimeout(function () {
-                    string = "#############################";
+                    string = "Seamus Woods";
                     splitstring = string.split('');
-                    document.getElementById('javaSkill').style.display = "Block";
-                    typeSkill(splitstring, 0, 'javaSkill', 20, "______________________________");
+                    document.getElementById('name').style.display = "Block";
+                    type(splitstring, 0, 'name', 50);
                     setTimeout(function () {
-                        string = "##########################";
+                        string = "21";
                         splitstring = string.split('');
-                        document.getElementById('cSkill').style.display = "Block";
-                        typeSkill(splitstring, 0, 'cSkill', 20, "______________________________");
+                        document.getElementById('age').style.display = "Block";
+                        type(splitstring, 0, 'age', 50);
                         setTimeout(function () {
-                            string = "#########################";
+                            string = "Ireland";
                             splitstring = string.split('');
-                            document.getElementById('pythonSkill').style.display = "Block";
-                            typeSkill(splitstring, 0, 'pythonSkill', 20, "______________________________");
+                            document.getElementById('location').style.display = "Block";
+                            type(splitstring, 0, 'location', 50);
                             setTimeout(function () {
-                                string = "###########################";
+                                string = "sewoods@tcd.ie";
                                 splitstring = string.split('');
-                                document.getElementById('armSkill').style.display = "Block";
-                                typeSkill(splitstring, 0, 'armSkill', 20, "______________________________");
+                                document.getElementById('contact').style.display = "Block";
+                                type(splitstring, 0, 'contact', 50);
+
+
                                 setTimeout(function () {
-
-                                    string = "#####################";
+                                    string = ".....";
                                     splitstring = string.split('');
-                                    document.getElementById('haskellSkill').style.display = "Block";
-                                    typeSkill(splitstring, 0, 'haskellSkill', 20, "______________________________");
+                                    document.getElementById('educationLoading').style.display = "Block";
+                                    type(splitstring, 0, 'educationLoading', 600);
                                     setTimeout(function () {
-
-                                        string = "####################";
+                                        string = "Integrated Computer Science";
                                         splitstring = string.split('');
-                                        document.getElementById('x86Skill').style.display = "Block";
-                                        typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
-                                    }, 500);
+                                        document.getElementById('course').style.display = "Block";
+                                        type(splitstring, 0, 'course', 50);
+                                        setTimeout(function () {
+                                            string = "Trinity College Dublin";
+                                            splitstring = string.split('');
+                                            document.getElementById('university').style.display = "Block";
+                                            type(splitstring, 0, 'university', 50);
+                                            setTimeout(function () {
+                                                string = "4th";
+                                                splitstring = string.split('');
+                                                document.getElementById('year').style.display = "Block";
+                                                type(splitstring, 0, 'year', 50);
+                                                setTimeout(function () {
+                                                    string = "First (I)";
+                                                    splitstring = string.split('');
+                                                    document.getElementById('grade').style.display = "Block";
+                                                    type(splitstring, 0, 'grade', 50);
+
+
+                                                    setTimeout(function () {
+                                                        string = ".....";
+                                                        splitstring = string.split('');
+                                                        document.getElementById('languageLoading').style.display = "Block";
+                                                        type(splitstring, 0, 'languageLoading', 600);
+                                                        setTimeout(function () {
+                                                            string = "#################";
+                                                            splitstring = string.split('');
+                                                            document.getElementById('jsSkill').style.display = "Block";
+                                                            typeSkill(splitstring, 0, 'jsSkill', 20, "______________________________");
+                                                            setTimeout(function () {
+                                                                string = "#############################";
+                                                                splitstring = string.split('');
+                                                                document.getElementById('javaSkill').style.display = "Block";
+                                                                typeSkill(splitstring, 0, 'javaSkill', 20, "______________________________");
+                                                                setTimeout(function () {
+                                                                    string = "##########################";
+                                                                    splitstring = string.split('');
+                                                                    document.getElementById('cSkill').style.display = "Block";
+                                                                    typeSkill(splitstring, 0, 'cSkill', 20, "______________________________");
+                                                                    setTimeout(function () {
+                                                                        string = "#########################";
+                                                                        splitstring = string.split('');
+                                                                        document.getElementById('pythonSkill').style.display = "Block";
+                                                                        typeSkill(splitstring, 0, 'pythonSkill', 20, "______________________________");
+                                                                        setTimeout(function () {
+                                                                            string = "###########################";
+                                                                            splitstring = string.split('');
+                                                                            document.getElementById('armSkill').style.display = "Block";
+                                                                            typeSkill(splitstring, 0, 'armSkill', 20, "______________________________");
+                                                                            setTimeout(function () {
+                                                                                string = "#####################";
+                                                                                splitstring = string.split('');
+                                                                                document.getElementById('haskellSkill').style.display = "Block";
+                                                                                typeSkill(splitstring, 0, 'haskellSkill', 20, "______________________________");
+                                                                                setTimeout(function () {
+                                                                                    string = "####################";
+                                                                                    splitstring = string.split('');
+                                                                                    document.getElementById('x86Skill').style.display = "Block";
+                                                                                    typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
+                                                                                }, 500);
+                                                                            }, 500);
+                                                                        }, 500);
+                                                                    }, 500);
+                                                                }, 500);
+                                                            }, 500);
+                                                        }, 2500);
+                                                    }, 500);
+                                                }, 500);
+                                            }, 500);
+                                        }, 500);
+                                    }, 2500);
                                 }, 500);
                             }, 500);
                         }, 500);
                     }, 500);
-                }, 500);
+                }, 2500);
             }
             ,
             4000
