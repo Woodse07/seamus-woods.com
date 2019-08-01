@@ -86,37 +86,52 @@ function test(page) {
 
         setTimeout(function () {
 
-            string = "#################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'jsSkill', 160, "______________________________");
+                string = "#################";
+                splitstring = string.split('');
+                document.getElementById('jsSkill').style.display = "Block";
+                typeSkill(splitstring, 0, 'jsSkill', 20, "______________________________");
+                setTimeout(function () {
+                    string = "#############################";
+                    splitstring = string.split('');
+                    document.getElementById('javaSkill').style.display = "Block";
+                    typeSkill(splitstring, 0, 'javaSkill', 20, "______________________________");
+                    setTimeout(function () {
+                        string = "##########################";
+                        splitstring = string.split('');
+                        document.getElementById('cSkill').style.display = "Block";
+                        typeSkill(splitstring, 0, 'cSkill', 20, "______________________________");
+                        setTimeout(function () {
+                            string = "#########################";
+                            splitstring = string.split('');
+                            document.getElementById('pythonSkill').style.display = "Block";
+                            typeSkill(splitstring, 0, 'pythonSkill', 20, "______________________________");
+                            setTimeout(function () {
+                                string = "###########################";
+                                splitstring = string.split('');
+                                document.getElementById('armSkill').style.display = "Block";
+                                typeSkill(splitstring, 0, 'armSkill', 20, "______________________________");
+                                setTimeout(function () {
 
-            string = "#############################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'javaSkill', 100, "______________________________");
+                                    string = "#####################";
+                                    splitstring = string.split('');
+                                    document.getElementById('haskellSkill').style.display = "Block";
+                                    typeSkill(splitstring, 0, 'haskellSkill', 20, "______________________________");
+                                    setTimeout(function () {
 
-            string = "##########################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'cSkill', 150, "______________________________");
-
-            string = "#########################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'pythonSkill', 130, "______________________________");
-
-            string = "###########################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'armSkill', 110, "______________________________");
-
-
-            string = "#####################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'haskellSkill', 150, "______________________________");
-
-
-            string = "####################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'x86Skill', 170, "______________________________");
-
-        }, 4000);
+                                        string = "####################";
+                                        splitstring = string.split('');
+                                        document.getElementById('x86Skill').style.display = "Block";
+                                        typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
+                                    }, 500);
+                                }, 500);
+                            }, 500);
+                        }, 500);
+                    }, 500);
+                }, 500);
+            }
+            ,
+            4000
+        );
     }
 }
 
@@ -140,7 +155,7 @@ function typeSkill(splitstr, index, className, speed, string) {
     var str = String(string);
     string = str.substr(0, index) + '#' + str.substr(index + 1);
     if (index < splitstr.length) {
-        $('.' + className + '').text('[' + string + ']' + " " + Math.floor((index/30)*100) + "% Skill");
+        $('.' + className + '').text('[' + string + ']' + " " + Math.floor((index / 30) * 100) + "% Skill");
         index++;
         setTimeout(function () {
             typeSkill(splitstr, index, className, speed, string);

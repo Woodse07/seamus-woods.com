@@ -1,5 +1,7 @@
 .terminalInput {
-    padding-top: 75%;
+    position: absolute;
+    width: 100%;
+    bottom: 2%;
 }
 
 hr {
