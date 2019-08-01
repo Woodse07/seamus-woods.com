@@ -101,14 +101,22 @@ function test(page) {
         document.getElementById('armSkill').style.display = "None";
         document.getElementById('haskellSkill').style.display = "None";
         document.getElementById('x86Skill').style.display = "None";
+
+        document.getElementById('cvLink').style.display = "None";
         $('.blinking').text('|');
         $('.blinking2').text('');
+        $('.blinking3').text('');
+        $('.terminalDoneDone').text('');
         $('.terminalDone').text('');
         $('.terminal').text('> ');
 
-        string = "loadResume()";
+
+        string = "echo $link_to_my_real_resume";
         splitstring = string.split('');
-        type(splitstring, 0, 'terminal', 200, "");
+        type(splitstring, 0, 'terminal', 100, "");
+        setTimeout(function () {
+            document.getElementById('cvLink').style.display = "Block";
+        }, 3500);
 
         setTimeout(function () {
             $('.blinking').text('');
@@ -118,7 +126,19 @@ function test(page) {
             string = "|";
             splitstring = string.split('');
             type(splitstring, 0, 'blinking2', 200, "");
-        }, 3000);
+            string = " loadResume()";
+            splitstring = string.split('');
+            type(splitstring, 0, 'terminalDone', 100, "");
+            setTimeout(function () {
+                $('.blinking2').text('');
+                string = ">";
+                splitstring = string.split('');
+                type(splitstring, 0, 'terminalDoneDone', 200, "");
+                string = "|";
+                splitstring = string.split('');
+                type(splitstring, 0, 'blinking3', 200, "");
+            }, 2500);
+        }, 4000);
 
 
         setTimeout(function () {
@@ -236,7 +256,7 @@ function test(page) {
                 }, 3000);
             }
             ,
-            4000
+            6000
         );
     }
 }

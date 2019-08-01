@@ -83,7 +83,7 @@ hr {
         margin: auto;
     }
 
-    .blinking, .blinking2 {
+    .blinking, .blinking2, .blinking3 {
         animation: blink 0.5s infinite alternate;
     }
 
