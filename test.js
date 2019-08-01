@@ -61,13 +61,13 @@ function test(page) {
         document.getElementById('PortfolioButton').className = "";
         document.getElementById('ResumeButton').className = "active";
 
-        $('.jsSkill').text('= [ ');
-        $('.javaSkill').text('= [ ');
-        $('.cSkill').text('= [ ');
-        $('.pythonSkill').text('= [ ');
-        $('.armSkill').text('= [ ');
-        $('.haskellSkill').text('= [ ');
-        $('.x86Skill').text('= [ ');
+        $('.jsSkill').text('');
+        $('.javaSkill').text('');
+        $('.cSkill').text('');
+        $('.pythonSkill').text('');
+        $('.armSkill').text('');
+        $('.haskellSkill').text('');
+        $('.x86Skill').text('');
         $('.terminal').text('> ');
 
         string = "loadResume()";
@@ -86,35 +86,35 @@ function test(page) {
 
         setTimeout(function () {
 
-            string = "########################";
+            string = "#################";
             splitstring = string.split('');
-            typeSkill(splitstring, 0, 'jsSkill', 160, "________________________________________");
+            typeSkill(splitstring, 0, 'jsSkill', 160, "______________________________");
 
-            string = "####################################";
+            string = "#############################";
             splitstring = string.split('');
-            typeSkill(splitstring, 0, 'javaSkill', 100, "________________________________________");
+            typeSkill(splitstring, 0, 'javaSkill', 100, "______________________________");
 
-            string = "################################";
+            string = "##########################";
             splitstring = string.split('');
-            typeSkill(splitstring, 0, 'cSkill', 150, "________________________________________");
-
-            string = "###############################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'pythonSkill', 130, "________________________________________");
-
-            string = "##################################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'armSkill', 110, "________________________________________");
-
-
-            string = "###########################";
-            splitstring = string.split('');
-            typeSkill(splitstring, 0, 'haskellSkill', 150, "________________________________________");
-
+            typeSkill(splitstring, 0, 'cSkill', 150, "______________________________");
 
             string = "#########################";
             splitstring = string.split('');
-            typeSkill(splitstring, 0, 'x86Skill', 170, "________________________________________");
+            typeSkill(splitstring, 0, 'pythonSkill', 130, "______________________________");
+
+            string = "###########################";
+            splitstring = string.split('');
+            typeSkill(splitstring, 0, 'armSkill', 110, "______________________________");
+
+
+            string = "#####################";
+            splitstring = string.split('');
+            typeSkill(splitstring, 0, 'haskellSkill', 150, "______________________________");
+
+
+            string = "####################";
+            splitstring = string.split('');
+            typeSkill(splitstring, 0, 'x86Skill', 170, "______________________________");
 
         }, 4000);
     }
@@ -139,10 +139,8 @@ function type(splitstr, index, className, speed) {
 function typeSkill(splitstr, index, className, speed, string) {
     var str = String(string);
     string = str.substr(0, index) + '#' + str.substr(index + 1);
-    console.log(index);
-    console.log(string);
     if (index < splitstr.length) {
-        $('.' + className + '').text('= [' + string + ']');
+        $('.' + className + '').text('[' + string + ']' + " " + Math.floor((index/30)*100) + "% Skill");
         index++;
         setTimeout(function () {
             typeSkill(splitstr, index, className, speed, string);
