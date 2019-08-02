@@ -76,10 +76,19 @@ function test(page) {
         $('.armSkill').text('');
         $('.haskellSkill').text('');
         $('.x86Skill').text('');
+        $('.company1').text('Company: ');
+        $('.company2').text('Company: ');
+        $('.position1').text('Position: ');
+        $('.position2').text('Position: ');
+        $('.startwork1').text('Start Date: ');
+        $('.startwork2').text('Start Date: ');
+        $('.endwork1').text('End Date: ');
+        $('.endwork2').text('End Date: ');
         $('.terminal').text('> ');
         $('.languageLoading').text('Loading Language Proficiency');
         $('.educationLoading').text('Loading Education');
         $('.generalLoading').text('Loading General Information');
+        $('.experienceLoading').text('Loading Experience');
 
         document.getElementById('generalLoading').style.display = "None";
         document.getElementById('name').style.display = "None";
@@ -88,10 +97,13 @@ function test(page) {
         document.getElementById('contact').style.display = "None";
 
         document.getElementById('educationLoading').style.display = "None";
+        document.getElementById('level').style.display = "None";
         document.getElementById('course').style.display = "None";
         document.getElementById('university').style.display = "None";
         document.getElementById('year').style.display = "None";
         document.getElementById('grade').style.display = "None";
+        document.getElementById('startEducation').style.display = "None";
+        document.getElementById('endEducation').style.display = "None";
 
         document.getElementById('languageLoading').style.display = "None";
         document.getElementById('jsSkill').style.display = "None";
@@ -101,6 +113,17 @@ function test(page) {
         document.getElementById('armSkill').style.display = "None";
         document.getElementById('haskellSkill').style.display = "None";
         document.getElementById('x86Skill').style.display = "None";
+
+        document.getElementById('experienceLoading').style.display = "None";
+        document.getElementById('company1').style.display = "None";
+        document.getElementById('company2').style.display = "None";
+        document.getElementById('position1').style.display = "None";
+        document.getElementById('position2').style.display = "None";
+        document.getElementById('startwork1').style.display = "None";
+        document.getElementById('startwork2').style.display = "None";
+        document.getElementById('endwork1').style.display = "None";
+        document.getElementById('endwork2').style.display = "None";
+
 
         document.getElementById('cvLink').style.display = "None";
         $('.blinking').text('|');
@@ -123,9 +146,6 @@ function test(page) {
             string = ">";
             splitstring = string.split('');
             type(splitstring, 0, 'terminalDone', 200, "");
-            string = "|";
-            splitstring = string.split('');
-            type(splitstring, 0, 'blinking2', 200, "");
             string = " loadResume --please";
             splitstring = string.split('');
             type(splitstring, 0, 'terminalDone', 100, "");
@@ -167,83 +187,159 @@ function test(page) {
                                     document.getElementById('educationLoading').style.display = "Block";
                                     type(splitstring, 0, 'educationLoading', 600);
                                     setTimeout(function () {
-                                        string = "Integrated Computer Science";
+                                        string = "Masters";
                                         splitstring = string.split('');
-                                        document.getElementById('course').style.display = "Block";
-                                        type(splitstring, 0, 'course', 20);
+                                        document.getElementById('level').style.display = "Block";
+                                        type(splitstring, 0, 'level', 20);
                                         setTimeout(function () {
-                                            string = "Trinity College Dublin";
+                                            string = "Integrated Computer Science";
                                             splitstring = string.split('');
-                                            document.getElementById('university').style.display = "Block";
-                                            type(splitstring, 0, 'university', 20);
+                                            document.getElementById('course').style.display = "Block";
+                                            type(splitstring, 0, 'course', 20);
                                             setTimeout(function () {
-                                                string = "4th";
+                                                string = "Trinity College Dublin";
                                                 splitstring = string.split('');
-                                                document.getElementById('year').style.display = "Block";
-                                                type(splitstring, 0, 'year', 20);
+                                                document.getElementById('university').style.display = "Block";
+                                                type(splitstring, 0, 'university', 20);
                                                 setTimeout(function () {
-                                                    string = "First (I)";
+                                                    string = "4th";
                                                     splitstring = string.split('');
-                                                    document.getElementById('grade').style.display = "Block";
-                                                    type(splitstring, 0, 'grade', 20);
-
-
+                                                    document.getElementById('year').style.display = "Block";
+                                                    type(splitstring, 0, 'year', 20);
                                                     setTimeout(function () {
-                                                        string = ".....";
+                                                        string = "First (I)";
                                                         splitstring = string.split('');
-                                                        document.getElementById('languageLoading').style.display = "Block";
-                                                        type(splitstring, 0, 'languageLoading', 600);
+                                                        document.getElementById('grade').style.display = "Block";
+                                                        type(splitstring, 0, 'grade', 20);
                                                         setTimeout(function () {
-                                                            string = "#################";
+                                                            string = "September 2016";
                                                             splitstring = string.split('');
-                                                            document.getElementById('jsSkill').style.display = "Block";
-                                                            typeSkill(splitstring, 0, 'jsSkill', 20, "______________________________");
+                                                            document.getElementById('startEducation').style.display = "Block";
+                                                            type(splitstring, 0, 'startEducation', 20);
                                                             setTimeout(function () {
-                                                                string = "#############################";
+                                                                string = "May 2021";
                                                                 splitstring = string.split('');
-                                                                document.getElementById('javaSkill').style.display = "Block";
-                                                                typeSkill(splitstring, 0, 'javaSkill', 20, "______________________________");
+                                                                document.getElementById('endEducation').style.display = "Block";
+                                                                type(splitstring, 0, 'endEducation', 20);
+
+
                                                                 setTimeout(function () {
-                                                                    string = "##########################";
+                                                                    string = ".....";
                                                                     splitstring = string.split('');
-                                                                    document.getElementById('cSkill').style.display = "Block";
-                                                                    typeSkill(splitstring, 0, 'cSkill', 20, "______________________________");
+                                                                    document.getElementById('languageLoading').style.display = "Block";
+                                                                    type(splitstring, 0, 'languageLoading', 600);
                                                                     setTimeout(function () {
-                                                                        string = "#########################";
+                                                                        string = "#################";
                                                                         splitstring = string.split('');
-                                                                        document.getElementById('pythonSkill').style.display = "Block";
-                                                                        typeSkill(splitstring, 0, 'pythonSkill', 20, "______________________________");
+                                                                        document.getElementById('jsSkill').style.display = "Block";
+                                                                        typeSkill(splitstring, 0, 'jsSkill', 20, "______________________________");
                                                                         setTimeout(function () {
-                                                                            string = "###########################";
+                                                                            string = "#############################";
                                                                             splitstring = string.split('');
-                                                                            document.getElementById('armSkill').style.display = "Block";
-                                                                            typeSkill(splitstring, 0, 'armSkill', 20, "______________________________");
+                                                                            document.getElementById('javaSkill').style.display = "Block";
+                                                                            typeSkill(splitstring, 0, 'javaSkill', 20, "______________________________");
                                                                             setTimeout(function () {
-                                                                                string = "#####################";
+                                                                                string = "##########################";
                                                                                 splitstring = string.split('');
-                                                                                document.getElementById('haskellSkill').style.display = "Block";
-                                                                                typeSkill(splitstring, 0, 'haskellSkill', 20, "______________________________");
+                                                                                document.getElementById('cSkill').style.display = "Block";
+                                                                                typeSkill(splitstring, 0, 'cSkill', 20, "______________________________");
                                                                                 setTimeout(function () {
-                                                                                    string = "####################";
+                                                                                    string = "#########################";
                                                                                     splitstring = string.split('');
-                                                                                    document.getElementById('x86Skill').style.display = "Block";
-                                                                                    typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
+                                                                                    document.getElementById('pythonSkill').style.display = "Block";
+                                                                                    typeSkill(splitstring, 0, 'pythonSkill', 20, "______________________________");
                                                                                     setTimeout(function () {
-                                                                                        $('.blinking2').text('');
-                                                                                        string = ">";
+                                                                                        string = "###########################";
                                                                                         splitstring = string.split('');
-                                                                                        type(splitstring, 0, 'terminalDoneDone', 200, "");
-                                                                                        string = "|";
-                                                                                        splitstring = string.split('');
-                                                                                        type(splitstring, 0, 'blinking3', 200, "");
+                                                                                        document.getElementById('armSkill').style.display = "Block";
+                                                                                        typeSkill(splitstring, 0, 'armSkill', 20, "______________________________");
+                                                                                        setTimeout(function () {
+                                                                                            string = "#####################";
+                                                                                            splitstring = string.split('');
+                                                                                            document.getElementById('haskellSkill').style.display = "Block";
+                                                                                            typeSkill(splitstring, 0, 'haskellSkill', 20, "______________________________");
+                                                                                            setTimeout(function () {
+                                                                                                string = "####################";
+                                                                                                splitstring = string.split('');
+                                                                                                document.getElementById('x86Skill').style.display = "Block";
+                                                                                                typeSkill(splitstring, 0, 'x86Skill', 20, "______________________________");
+
+
+                                                                                                setTimeout(function () {
+                                                                                                    string = ".....";
+                                                                                                    splitstring = string.split('');
+                                                                                                    document.getElementById('experienceLoading').style.display = "Block";
+                                                                                                    type(splitstring, 0, 'experienceLoading', 600);
+                                                                                                    setTimeout(function () {
+                                                                                                        string = "UnitedHealth Group - Optum";
+                                                                                                        splitstring = string.split('');
+                                                                                                        document.getElementById('company1').style.display = "Block";
+                                                                                                        type(splitstring, 0, 'company1', 20);
+                                                                                                        setTimeout(function () {
+                                                                                                            string = "TDP Intern (Software Engineer)";
+                                                                                                            splitstring = string.split('');
+                                                                                                            document.getElementById('position1').style.display = "Block";
+                                                                                                            type(splitstring, 0, 'position1', 20);
+                                                                                                            setTimeout(function () {
+                                                                                                                string = "June 2018";
+                                                                                                                splitstring = string.split('');
+                                                                                                                document.getElementById('startwork1').style.display = "Block";
+                                                                                                                type(splitstring, 0, 'startwork1', 20);
+                                                                                                                setTimeout(function () {
+                                                                                                                    string = "August 2018";
+                                                                                                                    splitstring = string.split('');
+                                                                                                                    document.getElementById('endwork1').style.display = "Block";
+                                                                                                                    type(splitstring, 0, 'endwork1', 20);
+                                                                                                                    setTimeout(function () {
+
+                                                                                                                        string = "Hewlett Packard Enterprise (HPE)";
+                                                                                                                        splitstring = string.split('');
+                                                                                                                        document.getElementById('company2').style.display = "Block";
+                                                                                                                        type(splitstring, 0, 'company2', 20);
+                                                                                                                        setTimeout(function () {
+                                                                                                                            string = "Cyber Security Intern";
+                                                                                                                            splitstring = string.split('');
+                                                                                                                            document.getElementById('position2').style.display = "Block";
+                                                                                                                            type(splitstring, 0, 'position2', 20);
+                                                                                                                            setTimeout(function () {
+                                                                                                                                string = "June 2019";
+                                                                                                                                splitstring = string.split('');
+                                                                                                                                document.getElementById('startwork2').style.display = "Block";
+                                                                                                                                type(splitstring, 0, 'startwork2', 20);
+                                                                                                                                setTimeout(function () {
+                                                                                                                                    string = "August 2019";
+                                                                                                                                    splitstring = string.split('');
+                                                                                                                                    document.getElementById('endwork2').style.display = "Block";
+                                                                                                                                    type(splitstring, 0, 'endwork2', 20);
+
+                                                                                                                                    setTimeout(function () {
+                                                                                                                                        string = ">";
+                                                                                                                                        splitstring = string.split('');
+                                                                                                                                        type(splitstring, 0, 'terminalDoneDone', 200, "");
+                                                                                                                                        string = "|";
+                                                                                                                                        splitstring = string.split('');
+                                                                                                                                        type(splitstring, 0, 'blinking3', 200, "");
+                                                                                                                                    }, 500);
+
+                                                                                                                                }, 500);
+                                                                                                                            }, 500);
+                                                                                                                        }, 500);
+                                                                                                                    }, 500);
+                                                                                                                }, 500);
+                                                                                                            }, 500);
+                                                                                                        }, 500);
+                                                                                                    }, 3000);
+                                                                                                }, 500);
+                                                                                            }, 500);
+                                                                                        }, 500);
                                                                                     }, 500);
                                                                                 }, 500);
                                                                             }, 500);
                                                                         }, 500);
-                                                                    }, 500);
+                                                                    }, 3000);
                                                                 }, 500);
                                                             }, 500);
-                                                        }, 3000);
+                                                        }, 500);
                                                     }, 500);
                                                 }, 500);
                                             }, 500);
