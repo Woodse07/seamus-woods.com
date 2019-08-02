@@ -51,6 +51,18 @@ function test(page) {
         document.getElementById('PortfolioButton').className = "active";
         document.getElementById('ResumeButton').className = "";
 
+        $('.proxy').text('');
+        document.getElementById('proxy').style.display = "Block";
+        string = "Proxy in Python";
+        splitstring = string.split('');
+        type(splitstring, 0, 'proxy', 100);
+
+        $('.driveEncryption').text('');
+        document.getElementById('driveEncryption').style.display = "Block";
+        string = "Google Drive Encryption";
+        splitstring = string.split('');
+        type(splitstring, 0, 'driveEncryption', 100);
+
     } else if (page == 'Resume') {
         document.getElementById('selfTexting').style.display = "None";
         document.getElementById('aboutPage').style.display = "None";
@@ -65,10 +77,13 @@ function test(page) {
         $('.age').text('Age: ');
         $('.location').text('Location: ');
         $('.contact').text('Contact: ');
+        $('.level').text('Level: ');
         $('.course').text('Course: ');
         $('.university').text('University: ');
         $('.year').text('Year: ');
         $('.grade').text('Last Years Grade: ');
+        $('.startEducation').text('Start Date: ');
+        $('.endEducation').text('End Date: ');
         $('.jsSkill').text('');
         $('.javaSkill').text('');
         $('.cSkill').text('');
@@ -84,7 +99,6 @@ function test(page) {
         $('.startwork2').text('Start Date: ');
         $('.endwork1').text('End Date: ');
         $('.endwork2').text('End Date: ');
-        $('.terminal').text('> ');
         $('.languageLoading').text('Loading Language Proficiency');
         $('.educationLoading').text('Loading Education');
         $('.generalLoading').text('Loading General Information');
@@ -146,6 +160,7 @@ function test(page) {
             string = ">";
             splitstring = string.split('');
             type(splitstring, 0, 'terminalDone', 200, "");
+            $('.blinking2').text('|');
             string = " loadResume --please";
             splitstring = string.split('');
             type(splitstring, 0, 'terminalDone', 100, "");
@@ -154,7 +169,7 @@ function test(page) {
 
         setTimeout(function () {
 
-
+                $('.blinking2').text('');
                 string = ".....";
                 splitstring = string.split('');
                 document.getElementById('generalLoading').style.display = "Block";

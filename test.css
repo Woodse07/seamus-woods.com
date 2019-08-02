@@ -1,3 +1,22 @@
+
+
+
+.portfolio {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.resume {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
 .terminalInput {
     position: relative;
     width: 100%;
@@ -5,154 +24,151 @@
 }
 
 hr {
-        width: 95%;
-        color: #4AF626;
-    }
+    width: 100%;
+    color: #4AF626;
+}
 
-    .imageLink {
-        padding-bottom: 1%;
-    }
+.imageLink {
+    padding-bottom: 1%;
+}
 
-    .iconContainer {
-        width: 100%;
-        position: absolute;
-        text-align: center;
-        bottom: 1%;
-        align-self: center;
-        display: flex;
-        justify-content: center;
-    }
+.iconContainer {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 1%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
 
-    .githubImage {
-        width: 50%;
-    }
+.githubImage {
+    width: 50%;
+}
 
-    nav {
-        position: absolute;
-        width: 100%;
-    }
+nav {
+    position: absolute;
+    width: 100%;
+}
 
-    ul {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        list-style: none;
-        width: 100%;
-    }
+ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+}
 
-    li {
-        float: left;
-        width: 25%;
-        list-style-type: none;
-    }
+li {
+    float: left;
+    width: 25%;
+    list-style-type: none;
+}
 
-    p {
-        color: #4AF626
-    }
+p {
+    color: #4AF626
+}
 
-    .about, .portfolio, .resume {
-        padding-top: 10%;
-        display: flex;
-        flex-direction: column;
-    }
+a {
+    color: #4AF626
+}
 
-    html, body {
-        height: 100%;
-        background: black;
-    }
+.about, .portfolio, .resume {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
 
-    .parent {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+html, body {
+    height: 100%;
+    background: black;
+}
 
-    h1 {
-        color: #4AF626;
-        font-weight: 300;
-        font-family: 'Inconsolata', monospace;
-        margin: auto;
-    }
+.parent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
-    h3 {
-        padding-left: 5%;
-        padding-right: 5%;
-        color: #4AF626;
-        font-weight: 300;
-        font-family: 'Inconsolata', monospace;
-        margin: auto;
-    }
+h1, h2, h3 {
+    color: #4AF626;
+    font-weight: 300;
+    font-family: 'Inconsolata', monospace;
+    margin: auto;
+}
 
-    .blinking, .blinking2, .blinking3 {
-        animation: blink 0.5s infinite alternate;
-    }
 
-    .bold {
-        font-weight: bold;
-    }
 
-    @keyframes blink {
-        0% {
-            opacity: 1
-        }
-        100% {
-            opacity: 0
-        }
-    }
+.blinking, .blinking2, .blinking3 {
+    animation: blink 0.5s infinite alternate;
+}
 
-    button {
-        border: none;
-        width: 100px;
-        margin: 20px auto;
-        outline: none;
-        padding: 5px;
-        color: white;
-        background: #555;
-        border-radius: 4px;
-        font-size: 14px;
-    }
+.bold {
+    font-weight: bold;
+}
 
-    input[type="text"] {
-        width: 200px;
-        margin: 0 auto;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid lightgrey;
-        border-radius: 4px;
+@keyframes blink {
+    0% {
+        opacity: 1
     }
+    100% {
+        opacity: 0
+    }
+}
 
-    /* Add a black background color to the top navigation */
-    .topnav {
-        overflow: hidden;
-        width: 100%;
-    }
+button {
+    border: none;
+    width: 100px;
+    margin: 20px auto;
+    outline: none;
+    padding: 5px;
+    color: white;
+    background: #555;
+    border-radius: 4px;
+    font-size: 14px;
+}
 
-    /* Style the links inside the navigation bar */
-    .topnav a {
-        color: #4AF626;
-        font-family: 'Inconsolata', monospace;
-        text-decoration: none;
-        font-size: 22px;
-        -webkit-transition: color 0.5s;
-        -moz-transition: color 0.5s;
-        -ms-transition: color 0.5s;
-        -o-transition: color 0.5s;
-        transition: color 0.5s;
-        outline: 0;
-        display: flex;
-        float: left;
-        width: 100%;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
+input[type="text"] {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+}
 
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        color: white;
-    }
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    width: 100%;
+}
 
-    /* Add a color to the active/current link */
-    .topnav a.active {
-        color: white;
-    }
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #4AF626;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    font-size: 22px;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    outline: 0;
+    display: flex;
+    float: left;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    color: white;
+}
