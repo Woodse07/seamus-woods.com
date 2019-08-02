@@ -75,6 +75,12 @@ function test(page) {
         splitstring = string.split('');
         type(splitstring, 0, 'matrixConv', 100);
 
+        $('.ukland').text('');
+        document.getElementById('ukland').style.display = "Block";
+        string = "UK Land Registry Project";
+        splitstring = string.split('');
+        type(splitstring, 0, 'ukland', 100);
+
     } else if (page == 'Resume') {
         document.getElementById('selfTexting').style.display = "None";
         document.getElementById('aboutPage').style.display = "None";
