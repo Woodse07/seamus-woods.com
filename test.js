@@ -59,9 +59,21 @@ function test(page) {
 
         $('.driveEncryption').text('');
         document.getElementById('driveEncryption').style.display = "Block";
-        string = "Google Drive Encryption";
+        string = "Secure Cloud Storage Application";
         splitstring = string.split('');
         type(splitstring, 0, 'driveEncryption', 100);
+
+        $('.githubNetwork').text('');
+        document.getElementById('githubNetwork').style.display = "Block";
+        string = "Github Degrees of Separation";
+        splitstring = string.split('');
+        type(splitstring, 0, 'githubNetwork', 100);
+
+        $('.matrixConv').text('');
+        document.getElementById('matrixConv').style.display = "Block";
+        string = "Matrix Convolution in Arm Assembly (Edge Detection)";
+        splitstring = string.split('');
+        type(splitstring, 0, 'matrixConv', 100);
 
     } else if (page == 'Resume') {
         document.getElementById('selfTexting').style.display = "None";
