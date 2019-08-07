@@ -1,218 +1,443 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="test.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+<link href="test.css" rel="stylesheet">
+
+<nav class="topnav">
+    <ul>
+        <li>
+            <a id="HomeButton" onclick="test('Home')" class="active"
+               href="#">Home</a>
+        <li>
+
+            <a id="AboutButton" onclick="test('About')" href="#">About</a>
+        </li>
+        <li>
+            <a id="PortfolioButton" onclick="test('Portfolio')"
+               href="#">Portfolio</a>
+        </li>
+        <li>
+            <a id="ResumeButton" onclick="test('Resume')" href="#">Resume</a>
+        </li>
+    </ul>
+</nav>
+
+
+<head>
     <title>Seamus Woods</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+</head>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<div id="fullpage" class="parent">
 
-    <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <div id="selfTexting" class="parent">
+        <h1><span class="text">
+		</span><span class="blinking bold">|</span>
+        </h1>
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-    <div class="KW_progressContainer">
-      <div class="KW_progressBar">
-
-      </div>
+        <div class="iconContainer">
+            <div style="width:10%">
+                <a class="imageLink" href="https://github.com/woodse07" target="_blank">
+                    <img alt="Github" class="githubImage" src="images/GitHub-Mark-Light-120px-plus.png">
+                </a>
+            </div>
+            <div style="width:10%">
+                <a class="imageLink" href="https://www.linkedin.com/in/seamus-woods/" target="_blank">
+                    <img align="middle" alt="Linkedin" class="githubImage" src="images/white_linkedin.png">
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="page">
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Seamus Woods</a></h1>
-              <ul>
-                <li class="active"><a href="index.html"><span><small>01</small>Home</span></a></li>
-                <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                <li><a href="contact.html"><span><small>06</small>Contact</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-    <div id="colorlib-page">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/me.png);"></span>Seamus Woods</a>
-              </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-    
-      <section class="home-slider owl-carousel js-fullheight">
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">Hello! I'm</a></p>
-                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Seamus Woods</h1>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">I'm from Dublin</a></p>
-                <h1 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">Computer Science Student</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END slider -->
-
-      <section class="ftco-section about-section">
-        <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-4" data-scrollax=" properties: { translateY: '-70%'}" style="height:500px"id="map"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text">About</h1>
-                <div class="p-5">
-                  <h2 class="mb-5">Hi! I'm Seamus Woods</h2>
-                  <p>I'm an innovative and hard working third year Computer Science student in Trinity College Dublin pursuing a masters. I am seeking an internship in the field of Computer Science in order to develop my skills and would love to work in a good company who will provide me with a rewarding career and an opportunity to grow as aperson.</p>
-                  <p><a href="resume.pdf">Checkout my resume</a></p>
-                  <ul class="ftco-footer-social list-unstyled mt-4">
-                    <li><a href="https://www.linkedin.com/in/seamus-woods/"><span class="icon-linkedin"></span></a></li>
-                    <li><a href="https://github.com/Woodse07"><span class="icon-github"></span></a></li>
-                  </ul>
-                  <h5>Contact me here!</h5>
-                  <p>Email: <a href="#">Sewoods@tcd.ie</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <section class="ftco-section ftco-counter" id="section-counter">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>Check out my projects on Github!</h2>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-start">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Projects done</span>
-                  <strong class="number" data-number="10">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Ongoing Projects</span>
-                  <strong class="number" data-number="3">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Thanks to..</span>
-                  <strong class="number" data-number="1000"></strong>
-                  <span class="ftco-label">Cups of coffee :)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="https://www.linkedin.com/in/seamus-woods/"><span class="icon-linkedin"></span></a></li>
-                  <li class="ftco-animate"><a href="https://github.com/Woodse07"><span class="icon-github"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Me</h2>
-                <p class="h3 email"><a href="mailto:sewoods@tcd.ie">sewoods@tcd.ie</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-      </div>
+    <div id="aboutPage" class="about" style="display:none;">
+        <h3>
+            <span class="nameText">Name: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+        <h3>
+            <span class="ageText">Age: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+        <h3>
+            <span class="emailText">Email: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+        <h3>
+            <span class="courseText">Course: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+        <h3>
+            <span class="educationText">Education: </span>
+            <span class="blinking bold">|</span>
+        </h3>
+        <br>
+        <hr>
+        </br>
+        <h3>
+            Bio: Hello World
+        </h3>
 
     </div>
 
+    <div id="portfolioPage" class="portfolio" style="display:none;">
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+        <h3>
+            Below is only a few projects that I've found interesting since starting college. If you would like to see the rest of my work please visit my Github page <a href="https://github.com/Woodse07" target="_blank">here</a>.
+        </h3>
+        <br></br>
+        <hr>
+        <br></br>
+
+        <div class="project">
+            <h2>
+                <span id="driveEncryption" class="driveEncryption"
+                      style="display:None">Secure Cloud Storage Application </span>
+            </h2>
+            <br></br>
+            <img style="width:40%" src="images/server1.png">
+            <br></br>
+            <h3>
+                Description:
+            </h3>
+            <h3>
+                Created a secure cloud storage application for Google Drive in Python. The application will secure all
+                files that are uploaded to the cloud, such that only people that are part of my 'secure cloud storage
+                group' will be able to decrypt my files, to all other users these files will be encrypted.
+            </h3>
+            <h3>
+                The application allows you to encrypt or decrypt files in the drive, add or remove users from your
+                secure cloud storage group, list all the files in th drive or list all the users in your group.
+            </h3>
+            <br></br>
+            <h3>
+                Please visit the project page for more details:
+                <a target="_blank"
+                   href="https://github.com/Woodse07/Advanced-Telecommunications-CS3031/tree/master/Project_2">Here</a>
+            </h3>
+        </div>
+
+        <br></br>
+        <hr>
+        <br></br>
+
+        <div class="project">
+            <h2>
+                <span id="githubNetwork" class="githubNetwork"
+                      style="display:None">Github Degrees of Separation</span>
+            </h2>
+            <br></br>
+            <img style="width:40%" src="images/graph.png">
+            <br></br>
+            <h3>
+                Description:
+            </h3>
+            <h3>
+                Interesting project using the Github API and the idea of the six degrees of separation (<a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Info here</a>).
+            </h3>
+            <h3>
+                Created a network of all of my followers, their followers, their followers followers, and so on. Could then enter a username into the app and it would return a graph of the least amount of connections between you and that person through your followers. Would love to come back to this at some stage and do some more work on it.
+            </h3>
+            <br></br>
+            <h3>
+                Libraries used:
+            </h3>
+            <h3>
+                NetworkX, Flask
+            </h3>
+            <br></br>
+            <h3>
+                Please visit the project page for more details:
+                <a target="_blank"
+                   href="https://github.com/Woodse07/Software-Engineering-CS3012-/tree/master/Social_Graph">Here</a>
+            </h3>
+        </div>
+
+        <br></br>
+        <hr>
+        <br></br>
+
+        <div class="project">
+            <h2>
+                <span id="proxy" class="proxy" style="display:None">Proxy in Python </span>
+            </h2>
+            <br></br>
+            <img style="width:40%" src="images/aftercache.png">
+            <br></br>
+            <h3>
+                Description:
+            </h3>
+            <h3>
+                Created a web proxy with Python that can respond to HTTP & HTTPS requests, handle websocket connections,
+                dynamically block URLs via a management console, efficiently cache requests locally thus saving
+                bandwidth and can handle multiple requests simultaneously by implementing a threaded server.
+            </h3>
+            <br></br>
+            <h3>
+                Libraries used:
+            </h3>
+            <h3>
+                thread, socket
+            </h3>
+            <br></br>
+            <h3>
+                Please visit the project page for more details:
+                <a target="_blank"
+                   href="https://github.com/Woodse07/Advanced-Telecommunications-CS3031/tree/master/Project_1">Here</a>
+            </h3>
+        </div>
+
+        <br></br>
+        <hr>
+        <br></br>
+
+        <div class="project">
+            <h2>
+                <span id="matrixConv" class="matrixConv" style="display:None">Matrix Convolution in Arm Assembly </span>
+            </h2>
+            <br></br>
+            <img style="width:20%" src="images/logo.png">
+            <img style="width:20%" src="images/logo_blur.png">
+            <img style="width:20%" src="images/logo-embos.png">
+            <img style="width:20%" src="images/logo-edge.png">
+            <br></br>
+            <h3>
+                Description:
+            </h3>
+            <h3>
+                First year assignment that I found interesting. Created an Arm Assembly program to do some image manipulation. Among this was manipulating brightness and contrast, adding a blur effect. The final part was a bonus effect.
+            </h3>
+            <h3>
+                For my bonus effect I decided to try some matrix convolution. It was really cool to understand it and see how you can do edge detection, emboss, sharpening manipulation to images.
+            </h3>
+            <br></br>
+            <h3>
+                Please visit the project page for more details:
+                <a target="_blank"
+                   href="https://github.com/Woodse07/Matrix-Convolution-ARM-Assembly-">Here</a>
+            </h3>
+        </div>
+
+        <br></br>
+        <hr>
+        <br></br>
+
+        <div class="project">
+            <h2>
+                <span id="ukland" class="ukland" style="display:None">UK Land Registry Project</span>
+            </h2>
+            <br></br>
+            <img style="width:40%" src="images/UKLand.png">
+            <br></br>
+            <h3>
+                Description:
+            </h3>
+            <h3>
+                First year project made using 100% Java. Created to explore data on property transactions from the UK Land Registry data set.
+            </h3>
+            <br></br>
+            <br></br>
+            <h3>
+                Please visit the project page for more details:
+                <a target="_blank"
+                   href="https://github.com/Woodse07/UK-Land-Registry-Project">Here</a>
+            </h3>
+        </div>
+
+        <br></br>
+        <hr>
+        <br></br>
+
+    </div>
+
+    <div id="resumePage" class="resume" style="display:none;">
+
+        <div class="terminalInput">
+            <h3>
+                <span class="terminal">></span>
+                <a style="color:#4AF626" href="resume.pdf" id="cvLink"
+                   class="cvLink" target="_blank">www.seamus-woods.com/resume.pdf</a>
+                <span class="blinking bold">|</span>
+            </h3>
+
+            <br></br>
+
+            <h3>
+                <span class="terminalDone"></span>
+                <span class="blinking2 bold"></span>
+            </h3>
+
+
+        </div>
+
+        <br></br>
+
+        <h3>
+            <span id="generalLoading" class="generalLoading" style="display:None">Loading General Information</span>
+        </h3>
+        <br></br>
+        <h3>
+            <span id="name" class="name" style="display:None">Name: </span>
+        </h3>
+        <h3>
+            <span id="age" class="age" style="display:None">Age: </span>
+        </h3>
+        <h3>
+            <span id="location" class="location" style="display:None">Location: </span>
+        </h3>
+        <h3>
+            <span id="contact" class="contact" style="display:None">Contact: </span>
+        </h3>
+
+        <br></br>
+
+        <h3>
+            <span id="educationLoading" class="educationLoading" style="display:None">Loading Education</span>
+        </h3>
+        <br></br>
+        <h3>
+            <span id="level" class="level" style="display:None">Level: </span>
+        </h3>
+        <h3>
+            <span id="course" class="course" style="display:None">Course: </span>
+        </h3>
+        <h3>
+            <span id="university" class="university" style="display:None">University: </span>
+        </h3>
+        <h3>
+            <span id="year" class="year" style="display:None">Year: </span>
+        </h3>
+        <h3>
+            <span id="grade" class="grade" style="display:None">Last Years Grade: </span>
+        </h3>
+        <h3>
+            <span id="startEducation" class="startEducation" style="display:None">Start Date: </span>
+        </h3>
+        <h3>
+            <span id="endEducation" class="endEducation" style="display:None">End Date: </span>
+        </h3>
+
+        <br></br>
+
+        <h3>
+            <span id="languageLoading" class="languageLoading" style="display:None">Loading Language Proficiency</span>
+        </h3>
+        <br></br>
+        <h3>
+            <span id="jsSkill" style="display:None">Javascript:</span>
+        </h3>
+        <h3>
+            <span style="" class="jsSkill"></span>
+        </h3>
+        <h3>
+            <span id="javaSkill" style="display:None">Java:</span>
+        </h3>
+        <h3>
+            <span style="" class="javaSkill"></span>
+        </h3>
+        <h3>
+            <span id="cSkill" style="display:None">C/C++:</span>
+        </h3>
+        <h3>
+            <span style="" class="cSkill"></span>
+        </h3>
+        <h3>
+            <span id="pythonSkill" style="display:None">Python:</span>
+        </h3>
+        <h3>
+            <span style="" class="pythonSkill"></span>
+        </h3>
+        <h3>
+            <span id="armSkill" style="display:None">Arm Assembly:</span>
+        </h3>
+        <h3>
+            <span style="" class="armSkill"></span>
+        </h3>
+        <h3>
+            <span id="haskellSkill" style="display:None">Haskell:</span>
+        </h3>
+        <h3>
+            <span style="" class="haskellSkill"></span>
+        </h3>
+        <h3>
+            <span id="x86Skill" style="display:None">x86 Assembly:</span>
+        </h3>
+        <h3>
+            <span style="" class="x86Skill"></span>
+        </h3>
+
+        <br></br>
+
+
+        <h3>
+            <span id="experienceLoading" class="experienceLoading" style="display:None">Loading Experience</span>
+        </h3>
+        <br></br>
+        <h3>
+            <span id="company1" class="company1" style="display:None">Company: </span>
+        </h3>
+        <h3>
+            <span id="position1" class="position1" style="display:None">Position: </span>
+        </h3>
+        <h3>
+            <span id="startwork1" class="startwork1" style="display:None">Start Date: </span>
+        </h3>
+        <h3>
+            <span id="endwork1" class="endwork1" style="display:None">End Date: </span>
+        </h3>
+        <br></br>
+        <h3>
+            <span id="company2" class="company2" style="display:None">Company: </span>
+        </h3>
+        <h3>
+            <span id="position2" class="position2" style="display:None">Position: </span>
+        </h3>
+        <h3>
+            <span id="startwork2" class="startwork2" style="display:None">Start Date: </span>
+        </h3>
+        <h3>
+            <span id="endwork2" class="endwork2" style="display:None">End Date: </span>
+        </h3>
+
+        <h3>
+            <span class="terminalDoneDone">></span>
+            <span class="blinking3 bold">|</span>
+        </h3>
+
+    </div>
+
+</div>
+
+<script>
+    var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"];
+    var splitstring = str[0].split('');
+    timeInterval = 100;
+
+    function typeMain(splitstr, index, className) {
+        if (index < splitstr.length) {
+            $('.' + className + '').append(splitstr[index]);
+            index++;
+            setTimeout(function () {
+                typeMain(splitstr, index, className);
+            }, timeInterval);
+        } else {
+            x++;
+            if (x > 2) {
+                x = 0;
+            }
+            index = 0;
+            splitstr = str[x].split('');
+            setTimeout(function () {
+                $('.' + className + '').text('');
+                typeMain(splitstr, index, className);
+            }, 3000);
+        }
+    }
+
+    typeMain(splitstring, 0, 'text');
+</script>
+
+
 </html>
