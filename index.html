@@ -413,7 +413,7 @@
 <script>
     var str = ["Hi, my name is Seamus!", "I'm a Computer Science student!", "Check out my work on Github!"];
     var splitstring = str[0].split('');
-    timeInterval = 100;
+    timeInterval = 70;
 
     function typeMain(splitstr, index, className) {
         if (index < splitstr.length) {
@@ -432,7 +432,7 @@
             setTimeout(function () {
                 $('.' + className + '').text('');
                 typeMain(splitstr, index, className);
-            }, 3000);
+            }, 2000);
         }
     }
 

@@ -17,19 +17,19 @@ function test(page) {
 
         var string = "Seamus Woods";
         var splitstring = string.split('');
-        type(splitstring, 0, 'nameText', 100);
+        type(splitstring, 0, 'nameText', 50);
         string = "21";
         splitstring = string.split('');
-        type(splitstring, 0, 'ageText', 700);
+        type(splitstring, 0, 'ageText', 500);
         string = "Sewoods@tcd.ie";
         splitstring = string.split('');
-        type(splitstring, 0, 'emailText', 150);
+        type(splitstring, 0, 'emailText', 100);
         string = "Computer Science";
         splitstring = string.split('');
-        type(splitstring, 0, 'courseText', 150);
+        type(splitstring, 0, 'courseText', 90);
         string = "Trinity College Dublin";
         splitstring = string.split('');
-        type(splitstring, 0, 'educationText', 160);
+        type(splitstring, 0, 'educationText', 130);
 
     } else if (page == 'Home') {
         document.getElementById('selfTexting').style.display = "flex";
