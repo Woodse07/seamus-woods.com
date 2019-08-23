@@ -46,24 +46,23 @@ hr {
     width: 50%;
 }
 
-nav {
-    position: absolute;
-    width: 100%;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    list-style: none;
-    width: 100%;
-}
+#nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;}
 
 li {
-    float: left;
-    width: 25%;
-    list-style-type: none;
+    display: inline;
+    padding: 10px;
 }
+
+li a{
+    text-decoration: none;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+}
+
 
 p {
     color: #4AF626
@@ -164,11 +163,12 @@ input[type="text"] {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+#nav a:hover {
+    transition: 0.5s;
     color: white;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+#nav a.active {
     color: white;
 }
