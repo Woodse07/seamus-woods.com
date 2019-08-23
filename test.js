@@ -51,6 +51,19 @@ function test(page) {
         document.getElementById('PortfolioButton').className = "active";
         document.getElementById('ResumeButton').className = "";
 
+
+        $('.LabRemediationAutomation').text('');
+        document.getElementById('LabRemediationAutomation').style.display = "Block";
+        string = "Lab Remediation Automation";
+        splitstring = string.split('');
+        type(splitstring, 0, 'LabRemediationAutomation', 100);
+
+        $('.HPO').text('');
+        document.getElementById('HPO').style.display = "Block";
+        string = "Genomics Labelling Tool";
+        splitstring = string.split('');
+        type(splitstring, 0, 'HPO', 100);
+
         $('.proxy').text('');
         document.getElementById('proxy').style.display = "Block";
         string = "Proxy in Python";
