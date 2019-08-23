@@ -26,6 +26,21 @@
 
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146341947-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-146341947-1');
+    </script>
+
+
     <title>Seamus Woods</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 </head>
@@ -110,11 +125,18 @@
                 Description:
             </h3>
             <h3>
-                Lab Remediation Automation was a project I worked on during my internship with Hewlett Packard Enterprise. Was given a collection of Python scripts which would run periodically to produce a list of labs within the company that weren't compliant, and details on the people who owned those labs (contact details, steps away from the CEO.)
-                Was tasked with improving the scripts and creating a frontend to display metrics from the scripts as well as some functionality to email the managers of the owners of these labs through the frontend.
+                Lab Remediation Automation was a project I worked on during my internship with Hewlett Packard
+                Enterprise. Was given a collection of Python scripts which would run periodically to produce a list of
+                labs within the company that weren't compliant, and details on the people who owned those labs (contact
+                details, steps away from the CEO.)
+                Was tasked with improving the scripts and creating a frontend to display metrics from the scripts as
+                well as some functionality to email the managers of the owners of these labs through the frontend.
             </h3>
             <h3>
-                Originally these scripts took over 8 hours to run start to finish, I managed to optimise them to run in less than 5 minutes. Created a frontend using Vue.js and Flask to display some metrics, look up details of anyone in the company, send emails regarding non compliant labs, and a map of the physical location of all non compliant labs.
+                Originally these scripts took over 8 hours to run start to finish, I managed to optimise them to run in
+                less than 5 minutes. Created a frontend using Vue.js and Flask to display some metrics, look up details
+                of anyone in the company, send emails regarding non compliant labs, and a map of the physical location
+                of all non compliant labs.
             </h3>
             <br></br>
             <h3>
@@ -139,15 +161,21 @@
                 Description:
             </h3>
             <h3>
-                The Genmomics Labelling Tool is a project I working on during my internship with Optum, UnitedHealth Group, which is based on the Human Phenotype Ontology, which is a standardised vocabulary of phenotypic abnormalities encountered in human disease. The HPO contains over 13,000 terms.
+                The Genmomics Labelling Tool is a project I working on during my internship with Optum, UnitedHealth
+                Group, which is based on the Human Phenotype Ontology, which is a standardised vocabulary of phenotypic
+                abnormalities encountered in human disease. The HPO contains over 13,000 terms.
             </h3>
             <h3>
-                Using Angular and D3.js as our main technologies, we built a web application to make it easier to navigate the ontology for general practitioners. We did this by creating
-                an interactive force directed graph which could be used to select the most accurate term to describe a patient. We paired this with a neo4j database of patients created by intern team based in US,
+                Using Angular and D3.js as our main technologies, we built a web application to make it easier to
+                navigate the ontology for general practitioners. We did this by creating
+                an interactive force directed graph which could be used to select the most accurate term to describe a
+                patient. We paired this with a neo4j database of patients created by intern team based in US,
                 and a machine learning model to recommend HPO terms based on a patients ICD codes.
             </h3>
             <h3>
-                The final result was a web application that a general practitioner could use to load in a patient, receive recommendation for HPO codes for that patient, add their own HPO codes using the force directed graph, and the ability to save the patient back into the database.
+                The final result was a web application that a general practitioner could use to load in a patient,
+                receive recommendation for HPO codes for that patient, add their own HPO codes using the force directed
+                graph, and the ability to save the patient back into the database.
             </h3>
             <br></br>
             <h3>
@@ -284,7 +312,8 @@
                 was a bonus effect.
             </h3>
             <h3>
-                For my bonus effect I decided to try some matrix convolution. It was really cool to understand how it works and how you can perform edge detection, emboss, sharpening manipulation to images.
+                For my bonus effect I decided to try some matrix convolution. It was really cool to understand how it
+                works and how you can perform edge detection, emboss, sharpening manipulation to images.
             </h3>
             <br></br>
             <h3>
